@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13724",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mint function of a smart contract implementation for HYIPCrowdsale1, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/HYIPCrowdsale1"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "HYIPCrowdsale1",
+        "address": "0xecfbc0c5bc5cf4a266c1a90db0a4fe79c82bcd93"
+    },
+    "signature": "04de507f7efe1eb9641d66a361ffc18f"
+}

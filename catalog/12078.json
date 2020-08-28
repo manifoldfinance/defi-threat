@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-12078",
+    "title": "Improper Access Control",
+    "description": "The mintToken function of a smart contract implementation for PolyAI (AI), a tradable Ethereum ERC20 token, has no period constraint, which allows the owner to increase the total supply of the digital assets arbitrarily so as to make profits, aka the \"tradeTrap\" issue.\n",
+    "references": ["https://peckshield.com/2018/06/11/tradeTrap/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "PolyAi",
+        "address": "0x5121e348e897daef1eef23959ab290e5557cf274"
+    },
+    "signature": "ba41c713dfeca7d69147f8ebcc09f699"
+}

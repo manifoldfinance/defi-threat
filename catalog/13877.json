@@ -1,0 +1,19 @@
+{
+    "id": "CVE-2018-13877",
+    "title": "Improper Input Validation",
+    "description": "The doPayouts() function of the smart contract implementation for MegaCryptoPolis, an Ethereum game, has a Denial of Service vulnerability. If a smart contract that has a fallback function always causing exceptions buys a land, users cannot buy lands near that contract's land, because those purchase attempts will not be completed unless the doPayouts() function successfully sends Ether to certain neighbors.\n",
+    "references": [
+        "https://medium.com/coinmonks/denial-of-service-dos-attack-on-megacryptopolis-an-ethereum-game-cve-2018-13877-cdd7f7ef8b08"
+    ],
+    "credits": "coinmonks",
+    "vulnerability_type": {
+        "cwe": "CWE-20",
+        "swc": "TODO"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "MCPSale",
+        "address": "0x2C2391F793f4f81475D87fffE366458Ce5380A13"
+    },
+    "signature": "cf8fa6f57d9691c9f8bd396127262e6b"
+}

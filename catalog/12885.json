@@ -1,0 +1,21 @@
+{
+    "id": "CVE-2018-12885",
+    "title": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)",
+    "description": "The randMod() function of the smart contract implementation for MyCryptoChamp, an Ethereum game, generates a random value with publicly readable variables such as the current block information and a private variable, (which can be read with a getStorageAt call). Therefore, attackers can get powerful champs/items and get rewards.\n",
+    "references": [
+        "https://etherscan.io/address/0x689FB61845488297dfE7586E5f7956475955d2Dc",
+        "https://etherscan.io/address/0xa44e464b13280340904ffef0a65b8a0033460430",
+        "https://medium.com/coinmonks/get-legendary-items-by-breaking-pnrg-of-mycyptochamp-an-ethereum-online-game-cve-2018-12855-6e6beb41b8df"
+    ],
+    "credits": "coinmonks",
+    "vulnerability_type": {
+        "cwe": "CWE-338",
+        "swc": "SWC-120"
+    },
+    "severity": 5.9,
+    "affected": {
+        "contractName": "MyCryptoChampCore",
+        "address": "0xa44e464b13280340904FfEF0a65b8a0033460430"
+    },
+    "signature": "c4323fd546dd89141f93a942a490eb3d"
+}

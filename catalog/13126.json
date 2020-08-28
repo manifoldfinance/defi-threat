@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13126",
+    "title": "Integer Overflow or Wraparound",
+    "description": "MoxyOnePresale is a smart contract running on Ethereum. The mint function has an integer overflow that allows minted tokens to be arbitrarily retrieved by the contract owner.\n",
+    "references": [
+        "https://github.com/dwfault/AirTokens/blob/master/SPXToken/mint%20interger%20overflow.md",
+        "https://github.com/dwfault/AirTokens/tree/master/MoxyOnePresale"
+    ],
+    "credits": "dwfault",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "MoxyOnePresale",
+        "address": "0x74fa9aa30b1b35c8f5bdb76f079c2624fc0b6498"
+    },
+    "signature": "aecd54d6f4008a7222d2bebd52305595"
+}

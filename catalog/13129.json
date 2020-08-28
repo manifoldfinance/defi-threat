@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13129",
+    "title": "Integer Overflow or Wraparound",
+    "description": "SP8DE Token (SPX) is a smart contract running on Ethereum. The mint function has an integer overflow that allows minted tokens to be arbitrarily retrieved by the contract owner.\n",
+    "references": ["https://github.com/dwfault/AirTokens/blob/master/SPXToken/mint%20interger%20overflow.md"],
+    "credits": "dwfault",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "SPXToken",
+        "address": "0x05aaaa829afa407d83315cded1d45eb16025910c"
+    },
+    "signature": "03c9799d891ad282141f4adcf45527f7"
+}

@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-12083",
+    "title": "Improper Access Control",
+    "description": "The mintToken function of a smart contract implementation for GOAL Bonanza (GOAL), a tradable Ethereum ERC20 token, has no period constraint, which allows the owner to increase the total supply of the digital assets arbitrarily so as to make profits, aka the \"tradeTrap\" issue.\n",
+    "references": ["https://peckshield.com/2018/06/11/tradeTrap/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "GoalToken",
+        "address": "0x7b69b78cc7fee48202c208609ae6d1f78ce42e13"
+    },
+    "signature": "7fc79be3711f1be77b7758d2d4dc979e"
+}

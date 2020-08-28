@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13581",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for TravelCoin (TRV), an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/TravelCoinToken"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "TravelCoinToken",
+        "address": "0x23cb17d7d079518dbff4febb6efcc0de58d8c984"
+    },
+    "signature": "f2dea3f6ecb1397e9005efbd42dc90aa"
+}

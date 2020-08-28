@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-12080",
+    "title": "Improper Access Control",
+    "description": "The mintToken function of a smart contract implementation for Internet Node Token (INT), a tradable Ethereum ERC20 token, has no period constraint, which allows the owner to increase the total supply of the digital assets arbitrarily so as to make profits, aka the \"tradeTrap\" issue.\n",
+    "references": ["https://peckshield.com/2018/06/11/tradeTrap/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "INT",
+        "address": "0x0b76544f6c413a555f309bf76260d1e02377c02a"
+    },
+    "signature": "f2dea3f6ecb1397e9005efbd42dc90aa"
+}

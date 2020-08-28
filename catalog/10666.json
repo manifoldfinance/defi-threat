@@ -1,0 +1,19 @@
+{
+    "id": "CVE-2018-10666",
+    "title": "Improper Access Control",
+    "description": "The Owned smart contract implementation for Aurora IDEX Membership (IDXM), an Ethereum ERC20 token, allows attackers to acquire contract ownership because the setOwner function is declared as public. A new owner can subsequently modify variables.\n",
+    "references": [
+        "https://medium.com/@jonghyk.song/aurora-idex-membership-idxm-erc20-token-allows-attackers-to-acquire-contract-ownership-1ff426cee7c6"
+    ],
+    "credits": "jonghyk.song",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "IDXM",
+        "address": "0xcc13fc627effd6e35d2d2706ea3c4d7396c610ea"
+    },
+    "signature": "4941761ffa815ebbb5ce1beb22e5c44e"
+}

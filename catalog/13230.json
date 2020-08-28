@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13230",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The sell function of a smart contract implementation for DestiNeed (DSN), an Ethereum token, has an integer overflow in which \"amount * sellPrice\" can be zero, consequently reducing a seller's assets.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/ETHEREUMBLACK/sell%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/DestiNeedToken"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "DestiNeedToken",
+        "address": "0xdFF8e7f5496D1e1A4Af3497Cb4712017a9C65442"
+    },
+    "signature": "649feaad833f4ca3539d83beedcabc3f"
+}
