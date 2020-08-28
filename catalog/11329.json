@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-11329",
+    "title": "Improper Access Control",
+    "description": "The DrugDealer function of a smart contract implementation for Ether Cartel, an Ethereum game, allows attackers to take over the contract's ownership, aka ceoAnyone. After that, all the digital assets (including Ether balance and tokens) might be manipulated by the attackers, as exploited in the wild in May 2018.\n",
+    "references": ["https://peckshield.com/2018/05/21/ceoAnyone/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "EtherCartel",
+        "address": "0x5088b94cf8a1143eb228b6d3f008350ca742ddc2"
+    },
+    "signature": "71950f32ed8a07c253354aa7be0f2eaf"
+}

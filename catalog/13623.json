@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13623",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for AirdropperCryptics, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/AirdropperCryptics"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "AirdropperCryptics",
+        "address": "0x31ea2a265020ecd892956c8e54dbdad9caaaaa98"
+    },
+    "signature": "d5f59b0ecea7b8af52a987d560580608"
+}

@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-11687",
+    "title": "Integer Overflow or Wraparound",
+    "description": "An integer overflow in the distributeBTR function of a smart contract implementation for Bitcoin Red (BTCR), an Ethereum ERC20 token, allows the owner to accomplish an unauthorized increase of digital assets by providing a large address[] array, as exploited in the wild in May 2018, aka the \"ownerUnderflow\" issue.\n",
+    "references": ["https://www.anquanke.com/post/id/147913"],
+    "credits": "TODO ",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "BitcoinRed",
+        "address": "0x6aac8cb9861e42bf8259f5abdc6ae3ae89909e11"
+    },
+    "signature": "7b1d1414b5d6dd23074665bd205a1b12"
+}

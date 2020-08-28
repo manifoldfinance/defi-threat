@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-12063",
+    "title": "Improper Access Control",
+    "description": "The sell function of a smart contract implementation for Internet Node Token (INT), a tradable Ethereum ERC20 token, allows a potential trap that could be used to cause financial damage to the seller, because of overflow of the multiplication of its argument amount and a manipulable variable sellPrice, aka the \"tradeTrap\" issue.\n",
+    "references": ["https://peckshield.com/2018/06/11/tradeTrap/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "INT",
+        "address": "0x0b76544f6c413a555f309bf76260d1e02377c02a"
+    },
+    "signature": "2cfc7e850e1cd6b33d22f6aba67eba97"
+}

@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13127",
+    "title": "Integer Overflow or Wraparound",
+    "description": "SP8DE PreSale Token (DSPX) is a smart contract running on Ethereum. The mint function has an integer overflow that allows minted tokens to be arbitrarily retrieved by the contract owner.\n",
+    "references": [
+        "https://github.com/dwfault/AirTokens/blob/master/SPXToken/mint%20interger%20overflow.md",
+        "https://github.com/dwfault/AirTokens/tree/master/DSPX"
+    ],
+    "credits": "dwfault",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "DSPXToken",
+        "address": "0x30dda19c0b94a88ed8784868ec1e9375d9f0e27c"
+    },
+    "signature": "37a6cd24ed0a87333f847c750462552e"
+}

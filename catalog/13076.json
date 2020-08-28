@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13076",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for Betcash (BC), an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": ["https://github.com/VenusADLab/EtherTokens/blob/master/Betcash/Betcash.md"],
+    "credits": "VenusADLab",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "Betcash",
+        "address": "0x4D391B4350cA1C690eBaf00d35bfcDd5721470F8"
+    },
+    "signature": "ba41c713dfeca7d69147f8ebcc09f699"
+}

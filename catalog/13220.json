@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13220",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The sell function of a smart contract implementation for MAVCash, an Ethereum token, has an integer overflow in which \"amount * sellPrice\" can be zero, consequently reducing a seller's assets.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/ETHEREUMBLACK/sell%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/MAVCash"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "MAVCash",
+        "address": "0x61dc161B06088b9cbaaD53391134929A83D1EB7A"
+    },
+    "signature": "649feaad833f4ca3539d83beedcabc3f"
+}

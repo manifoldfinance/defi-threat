@@ -9,17 +9,17 @@ const resolveOwn = relativePath => path.resolve(__dirname, relativePath);
 
 function getThreatMatrix) {
   let data = [];
-   try {
-     const xcveDir = resolveOwn(xcveDirectory)
-     fs.readdirSync(xcveDir)
-       .map(item => resolveOwn(`${xcveDirectory}/${item}`))
-       .forEach(filePath => data.push(yaml.safeLoad(
-         fs.readFileSync(filePath, 'utf8')
-       )));
-     return data;
-   } catch (e) {
-     throw new Error(e);
-   }
+  try {
+    const xcveDir = resolveOwn(xcveDirectory)
+    fs.readdirSync(xcveDir)
+      .map(item => resolveOwn(`${xcveDirectory}/${item}`))
+      .forEach(filePath => data.push(yaml.safeLoad(
+        fs.readFileSync(filePath, 'utf8')
+      )));
+    return data;
+  } catch (e) {
+    throw new Error(e);
+  }
 }
 
 module.exports = { getThreatMatrix };

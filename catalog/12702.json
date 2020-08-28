@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-12702",
+    "title": "Improper Input Validation",
+    "description": "The approveAndCallcode function of a smart contract implementation for Globalvillage ecosystem (GVE), an Ethereum ERC20 token, allows attackers to steal assets (e.g., transfer the contract's balances into their account) because the callcode (i.e., _spender.call(_extraData)) is not verified, aka the \"evilReflex\" issue. NOTE: a PeckShield disclosure states \"some researchers have independently discussed the mechanism of such vulnerability.\"\n",
+    "references": [
+        "https://huobiglobal.zendesk.com/hc/en-us/articles/360000110521-HADAX-Suspends-18T-and-GVE-Deposits-and-Withdrawals",
+        "https://peckshield.com/2018/06/23/evilReflex/"
+    ],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-20",
+        "swc": "TODO"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "GVE",
+        "address": "0x81705082eF9f0D660f07BE80093D46d826d48b25"
+    },
+    "signature": "496bfce3c69d19d80f6bfc128d786441"
+}

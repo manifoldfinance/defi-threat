@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13325",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The _sell function of a smart contract implementation for GROWCHAIN (GROW), an Ethereum token, has an integer overflow.\n",
+    "references": ["https://github.com/safecomet/EtherTokens/blob/master/GROWCHAIN%20(GROW)/GROWCHAIN%20(GROW).md"],
+    "credits": "safecomet",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "GrowToken",
+        "address": "0x0a9A9ce600D08BF9b76F49FA4e7b38A67EBEB1E6"
+    },
+    "signature": "76411a4244dbfb4b46220cdf4c85e477"
+}

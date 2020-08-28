@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-11239",
+    "title": "Integer Overflow or Wraparound",
+    "description": "An integer overflow in the _transfer function of a smart contract implementation for Hexagon (HXG), an Ethereum ERC20 token, allows attackers to accomplish an unauthorized increase of digital assets by providing a _to argument in conjunction with a large _value argument, as exploited in the wild in May 2018, aka the \"burnOverflow\" issue.\n",
+    "references": ["https://peckshield.com/2018/05/18/burnOverflow/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "Hexagon",
+        "address": "0xB5335e24d0aB29C190AB8C2B459238Da1153cEBA"
+    },
+    "signature": "62adc588c003b90129b8fb9e1104978d"
+}

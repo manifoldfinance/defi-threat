@@ -1,0 +1,21 @@
+{
+    "id": "CVE-2018-10376",
+    "title": "Integer Overflow or Wraparound",
+    "description": "An integer overflow in the transferProxy function of a smart contract implementation for SmartMesh (aka SMT), an Ethereum ERC20 token, allows attackers to accomplish an unauthorized increase of digital assets via crafted _fee and _value parameters, as exploited in the wild in April 2018, aka the \"proxyOverflow\" issue.\n",
+    "references": [
+        "https://dasp.co/#item-3",
+        "https://peckshield.com/2018/04/25/proxyOverflow/",
+        "https://www.reddit.com/r/ethereum/comments/8esyg9/okex_erc20_bug/"
+    ],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "MESH",
+        "address": "0x3ac6cb00f5a44712022a51fbace4c7497f56ee31"
+    },
+    "signature": "71cd15d6576a65055cf0b2dff279e7ab"
+}

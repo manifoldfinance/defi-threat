@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13592",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for RajTest, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/RajTest"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "RajTestICO",
+        "address": "0x06f726f750dd2a140a3f3bbe1fa58b624b361a33"
+    },
+    "signature": "15d8a078fdb84aaa2a15c1609e7c4b4b"
+}
