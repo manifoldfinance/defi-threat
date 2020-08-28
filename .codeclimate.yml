@@ -1,0 +1,5 @@
+git-legal:
+  enabled: true
+  config:
+    # eg. Affero GPL
+    allow_affero_copyleft: false
