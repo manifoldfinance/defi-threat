@@ -1,0 +1,19 @@
+{
+    "id": "CVE-2018-11411",
+    "title": "Improper Input Validation",
+    "description": "The transferFrom function of a smart contract implementation for DimonCoin (FUD), an Ethereum ERC20 token, allows attackers to steal assets (e.g., transfer all victims' balances into their account) because certain computations involving _value are incorrect.\n",
+    "references": [
+        "https://medium.com/@jonghyk.song/dimoncoin-fud-erc20-token-allows-attackers-to-steal-all-victims-balances-cve-2018-11411-ba9a320604f9"
+    ],
+    "credits": "jonghyk.song",
+    "vulnerability_type": {
+        "cwe": "CWE-20",
+        "swc": "TODO"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "DimonCoin",
+        "address": "0xf084d5BC3e35e3D903260267EbD545c49c6013D0"
+    },
+    "signature": "6349174075c115bf63a157b0c27df445"
+}

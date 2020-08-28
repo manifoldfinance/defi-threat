@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13756",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for CherryCoinFoundation, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/CherryCoinFoundation"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "CherryCoinFoundation",
+        "address": "0x1975bb03de10f058d6048ef3f00e1a704b7a0b39"
+    },
+    "signature": "5b9e858cc19030acd2020e37e9eaf1ec"
+}

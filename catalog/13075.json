@@ -1,0 +1,19 @@
+{
+    "id": "CVE-2018-13075",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for Carbon Exchange Coin Token (CEC), an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/VenusADLab/EtherTokens/blob/master/CarbonExchangeCoinToken/CarbonExchangeCoinToken.md"
+    ],
+    "credits": "VenusADLab",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "CarbonExchangeCoinToken",
+        "address": "0x0Eb152d2bba8aF722D7E296A1F223d819C3bbB1f"
+    },
+    "signature": "c5d1692d61e04ef626bbae2253006abb"
+}

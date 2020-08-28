@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13083",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for Plaza Token (PLAZA), an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": ["https://github.com/VenusADLab/EtherTokens/blob/master/PlazaToken/PlazaToken.md"],
+    "credits": "VenusADLab",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "PlazaToken",
+        "address": "0x332124F226e80c3AFdBb59271f550881b20604A1"
+    },
+    "signature": "d5f59b0ecea7b8af52a987d560580608"
+}

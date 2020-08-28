@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13720",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for Antoken, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/Antoken"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "Antoken",
+        "address": "0x7e2495d14237d66251442c56b67583e9c7f80047"
+    },
+    "signature": "f818be4ab61fcfcd1e723225c5fae3f0"
+}

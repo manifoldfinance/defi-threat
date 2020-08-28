@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13740",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for OneChain, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/OneChain"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "OneChain",
+        "address": "0x6b17bfa6930e7490ebd2874cef490074708f36b9"
+    },
+    "signature": "f818be4ab61fcfcd1e723225c5fae3f0"
+}

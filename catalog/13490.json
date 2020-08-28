@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13490",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for FILM, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/FILM"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "FILM",
+        "address": "0x66b11115e070269d65400ea359a72d643804cc2f"
+    },
+    "signature": "c5d1692d61e04ef626bbae2253006abb"
+}

@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-12084",
+    "title": "Improper Access Control",
+    "description": "The mintToken function of a smart contract implementation for BitAsean (BAS), a tradable Ethereum ERC20 token, has no period constraint, which allows the owner to increase the total supply of the digital assets arbitrarily so as to make profits, aka the \"tradeTrap\" issue.\n",
+    "references": ["https://peckshield.com/2018/06/11/tradeTrap/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "BitAseanToken",
+        "address": "0x2a05d22db079bc40c2f77a1d1ff703a56e631cc1"
+    },
+    "signature": "f2dea3f6ecb1397e9005efbd42dc90aa"
+}

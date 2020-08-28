@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13085",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for FreeCoin (FREE), an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": ["https://github.com/VenusADLab/EtherTokens/blob/master/FreeCoin/FreeCoin.md"],
+    "credits": "VenusADLab",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "FreeCoin",
+        "address": "0xfdEA2AD97EC5297090c8d945f25a15f17f4C283d"
+    },
+    "signature": "92d5243c85d78cefacb5c4d7697a2514"
+}

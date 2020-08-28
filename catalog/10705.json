@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-10705",
+    "title": "Improper Access Control",
+    "description": "The Owned smart contract implementation for Aurora DAO (AURA), an Ethereum ERC20 token, allows attackers to acquire contract ownership because the setOwner function is declared as public. An attacker can then conduct a lockBalances() denial of service attack.\n",
+    "references": ["https://peckshield.com/2018/05/03/ownerAnyone/"],
+    "credits": "peckshield.com",
+    "vulnerability_type": {
+        "cwe": "CWE-284",
+        "swc": "SWC-105"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "AURA",
+        "address": "0xcdcfc0f66c522fd086a1b725ea3c0eeb9f9e8814"
+    },
+    "signature": "4941761ffa815ebbb5ce1beb22e5c44e"
+}

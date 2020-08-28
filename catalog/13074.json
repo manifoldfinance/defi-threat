@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13074",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for FIBToken (FIB), an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": ["https://github.com/VenusADLab/EtherTokens/blob/master/FIBToken/FIBToken.md"],
+    "credits": "VenusADLab",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "FIBToken",
+        "address": "0x24A45d81170005Be4f51c8a294883b394BD83412"
+    },
+    "signature": "d5f59b0ecea7b8af52a987d560580608"
+}

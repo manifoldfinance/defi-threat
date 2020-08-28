@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-14576",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for SunContract, an Ethereum token, has an integer overflow via the _amount variable.\n",
+    "references": [
+        "http://seclists.org/fulldisclosure/2018/Jul/93",
+        "https://github.com/SunContract/SmartContracts/issues/1"
+    ],
+    "credits": "SunContract",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "SunContractToken",
+        "address": "0xF4134146AF2d511Dd5EA8cDB1C4AC88C57D60404"
+    },
+    "signature": "6cdf43eddb2b1c9c3a2620c87032c940"
+}

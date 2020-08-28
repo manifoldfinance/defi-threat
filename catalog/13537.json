@@ -1,0 +1,20 @@
+{
+    "id": "CVE-2018-13537",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for EthereumLegit, an Ethereum token, has an integer overflow that allows the owner of the contract to set the balance of an arbitrary user to any value.\n",
+    "references": [
+        "https://github.com/BlockChainsSecurity/EtherTokens/blob/master/GEMCHAIN/mint%20integer%20overflow.md",
+        "https://github.com/BlockChainsSecurity/EtherTokens/tree/master/EthereumLegit"
+    ],
+    "credits": "BlockChainsSecurity",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "EthereumLegit",
+        "address": "0xbaf9d121d6447b19e95f48fad834a0dff1a92691"
+    },
+    "signature": "f2dea3f6ecb1397e9005efbd42dc90aa"
+}

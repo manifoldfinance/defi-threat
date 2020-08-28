@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-12511",
+    "title": "Integer Overflow or Wraparound",
+    "description": "In the mintToken function of a smart contract implementation for Substratum (SUB), an Ethereum ERC20 token, the administrator can control mintedAmount, leverage an integer overflow, and modify a user account's balance arbitrarily.\n",
+    "references": ["https://github.com/n0pn0pn0p/smart_contract_-vulnerability/blob/master/PolyAi.md"],
+    "credits": "n0pn0pn0p",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "TODO",
+        "address": "0x12480E24eb5bec1a9D4369CaB6a80caD3c0A377A"
+    },
+    "signature": "f2dea3f6ecb1397e9005efbd42dc90aa"
+}

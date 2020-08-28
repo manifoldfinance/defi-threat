@@ -1,0 +1,17 @@
+{
+    "id": "CVE-2018-13145",
+    "title": "Integer Overflow or Wraparound",
+    "description": "The mintToken function of a smart contract implementation for JavaSwapTest (JST), an Ethereum token, has an integer overflow.\n",
+    "references": ["https://github.com/safecomet/EtherTokens/blob/master/JavaSwapTest%20(JST)/JavaSwapTest%20(JST).md"],
+    "credits": "safecomet",
+    "vulnerability_type": {
+        "cwe": "CWE-190",
+        "swc": "SWC-101"
+    },
+    "severity": 7.5,
+    "affected": {
+        "contractName": "JavaSwapTest",
+        "address": "0x4868d191a23428Fa9ACa36a3d0f1421f33D12226"
+    },
+    "signature": "c5d1692d61e04ef626bbae2253006abb"
+}
