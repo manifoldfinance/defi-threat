@@ -1,0 +1,542 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+				"data_version":{
+					"type": "string"
+				},
+				"defi_id": {
+        			"type": "string"
+      			},
+				"updated":{
+					"type":"string"
+				},
+				"serial":{
+					"type":"integer"
+				},
+      			"date_requested":{
+      				"type":"string"
+      			},
+      			"date_assigned":{
+      				"type":"string"
+      			},
+      			"date_public":{
+      				"type":"string"
+      			},
+      			"requester":{
+      				"type":"string"
+      			},
+      			"assigner":{
+      				"type":"string"
+      			},
+      			"state":{
+      				"type":"string"
+      			},
+      			"replaced_by":{
+      				"type":"string"
+      			},
+      			"title":{
+      				"type":"array",
+      				"items":{
+      					"type":"object",
+      					"properties":{
+      						"lang":{
+      							"type":"string"
+      						},
+      						"value":{
+      							"type":"string"
+      						}
+      					}
+      				}
+      			},
+      			"products": {
+        			"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"protocol_name":{
+								"type":"string"
+							},
+							"product":{
+								"type":"array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"product_name":{
+											"type":"string"
+										},
+										"version":{
+											"type":"string"
+										},
+										"affects":{
+											"type":"string"
+										},
+										"cpe":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"cpe_value":{
+														"type":"string"
+													}
+												}
+											}
+										},
+										"swid":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"swid_value":{
+														"type":"string"
+													}
+												}
+											}
+										}
+									},"required": ["product_name","version"]
+								}
+							}
+						}
+					}
+      			},
+      			"problem_types": {
+        			"type": "array",
+        			"items": {
+        				"type":"object",
+        				"properties":{
+              				"description": {
+                				"type": "array",
+                				"items":{
+                					"type":"object",
+                					"properties":{
+                						"lang":{
+                							"type":"string"
+                						},
+                						"value":{
+                							"type":"string"
+                						}
+                					}
+              						}
+              					},      				
+            				"cwes": {
+                				"type": "array",
+                				"items": {
+                  					"type": "string"
+                					}
+              					},
+              				"owasp":{
+              					"type":"array",
+              					"items":{
+              						"type":"string"
+              					}
+              				}
+            				}, "required":["description"]
+            				}
+      			},
+      			"references": {
+        			"type": "array",
+        			"items": {
+          				"type": "object",
+          				"properties": {
+            				"url": {
+              					"type": "string"
+            				},
+            				"name": {
+              					"type": "string"
+            				},
+            				"publish_date": {
+              					"type": "string"
+            				}
+          				},"required": ["url"]
+        			}
+      			},
+      			"description": {
+        			"type": "array",
+        			"items":{
+        				"type":"object",
+        				"properties":{
+        					"lang":{
+        						"type":"string"
+        					},
+        					"value":{
+        						"type":"string"
+        					}
+        				}
+        			}
+        		},
+      			"attack": {
+        			"type": "array",
+        			"items": {
+          				"type": "object",
+          				"properties": {
+            				"attackers": {
+              					"type": "array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"extent":{
+											"type":"string"
+										},
+										"authentication":{
+											"type":"string"
+										},
+										"user_assistance":{
+											"type":"string"
+										}
+									}
+								}
+            				},
+            				"impacts": {
+              					"type": "array",
+              					"items": {
+              						"type":"string"
+                					}
+     						},
+            				"attack_methods": {
+              					"type": "array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"vectors":{
+											"type":"array",
+											"items":{
+												"type":"string"
+											}
+										},
+										"components":{
+											"type":"array",
+											"items":{
+												"type":"string"
+											}
+										},
+										"capecs":{
+												"type":"string"
+										}
+									}
+								}
+            				}
+          				}
+        			}
+      			},
+				"files":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"url":{
+								"type":"string"
+							},
+							"import_time":{
+								"type":"string"
+							},
+							"local_name":{
+								"type":"string"
+							}
+						}
+					}
+				},
+				"exploitation":{
+					"type":"object",
+					"properties":{
+						"lang":{
+							"type":"string"
+						},
+						"value":{
+							"type":"string"
+						}
+					}
+				},
+				"work_around":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"lang":{
+								"type":"string"
+							},
+							"value":{
+								"type":"string"
+							}
+						}
+					}
+				},
+				"time_line":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"time_stamp":{
+								"type":"string"
+							},
+							"reference":{
+								"type":"object",
+								"properties":{
+									"reference_name":{
+										"type":"string"
+									},
+									"reference":{
+										"type":"string"
+									}
+								}
+							},
+							"text":{
+								"type":"array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"lang":{
+											"type":"string"
+										},
+										"value":{
+											"type":"string"
+										}
+									}
+								}
+							}
+						}	
+					}
+				},
+				"source":{
+					"type":"object",
+					"properties":{
+						"discovered_by":{
+							"type":"string"
+						},
+						"discovered_with":{
+							"type":"string"
+						},
+						"verification":{
+							"type":"string"
+						},
+						"cna_chain":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				},
+      			"conditions":{
+      				"type":"array",
+      				"items":{
+      					"type":"string"
+      				}
+      			},
+      			"notes":{
+      				"type":"object",
+      				"properties":{
+      					"lang":{
+      						"type":"string"
+      					},
+      					"value":{
+      						"type":"string"
+      					}
+      				}
+      			},
+      			"credits":{
+      				"type":"array",
+      				"items":{
+      					"type":"object",
+      					"properties":{
+      						"id":{
+      							"type":"string"
+      						},
+      						"role":{
+      							"type":"array",
+      							"items":{
+      								"type":"object",
+      								"properties":{
+      									"discoverer":{
+      										"type":"string"
+      									},
+      									"research_assist":{
+      										"type":"string"
+      									},
+      									"exploit_code":{
+      										"type":"string"
+      									}
+      								}
+      							}
+      						}
+      					}
+      				}
+      			},
+      			"impact_metrics":{
+		      		"type":"object",
+		      		"properties":{	
+			      		"cvss2": {
+			      			"type": "object",
+			      			"properties": {
+			      				"vector":{
+		      						"type":"string"
+		      					},
+			        			"bm": {
+			           				"type": "object",
+			         				"properties": {
+										"av":{
+											"type":"string"
+										},
+										"ac":{
+											"type":"string"
+										},
+										"au":{
+											"type":"string"
+										},
+										"c":{
+											"type":"string"
+										},
+										"i":{
+											"type":"string"
+										},
+										"a":{
+											"type":"string"
+										},
+										"score": {
+						                	"type": "string"
+										}
+						            }
+							      },
+							      "tm": {
+							      		"type": "object",
+							            "properties": {
+											"e":{
+												"type":"string"
+											},
+											"rl":{
+												"type":"string"
+											},
+											"rc":{
+												"type":"string"
+											},
+											"score": {
+						                		"type": "string"
+											}
+						            	}
+						          	},
+							        "em": {
+							            	"type": "object",
+							            		"properties": {
+													"cdp":{
+														"type":"string"
+													},
+													"td":{
+														"type":"string"
+													},
+													"cr":{
+														"type":"string"
+													},
+													"ir":{
+														"type":"string"
+													},
+													"ar":{
+														"type":"string"
+													},
+													"score": {
+														"type": "string"
+													}
+							            		}
+							          		}
+							    }
+							},
+							"cvss3": {
+				      				"type": "object",
+				      				"properties": {
+				      					"vector":{
+		      								"type":"string"
+		      							},
+				        				"bm": {
+				            					"type": "object",
+				            					"properties": {
+													"av":{
+														"type":"string"
+													},
+													"ac":{
+														"type":"string"
+													},
+													"pr":{
+														"type":"string"
+													},
+													"ui":{
+														"type":"string"
+													},
+													"scope":{
+														"type":"string"
+													},
+													"c":{
+														"type":"string"
+													},
+													"i":{
+														"type":"string"
+													},
+													"a":{
+														"type":"string"
+													},
+													"score": {
+									                	"type": "string"
+													}
+									            }
+									          },
+								        "tm": {
+								            	"type": "object",
+								            	"properties": {
+													"e":{
+														"type":"string"
+														},
+													"rl":{
+														"type":"string"
+														},
+													"rc":{
+														"type":"string"
+														},
+													"score": {
+								                		"type": "string"
+														}
+								            	}
+								          	},
+								        "em": {
+								            	"type": "object",
+								            		"properties": {
+														"mav":{
+															"type":"string"
+														},
+														"mac":{
+															"type":"string"
+														},
+														"mpr":{
+															"type":"string"
+														},
+														"mui":{
+															"type":"string"
+														},
+														"ms":{
+															"type":"string"
+														},
+														"mc":{
+															"type":"string"
+														},
+														"mi":{
+															"type":"string"
+														},
+														"ma":{
+															"type":"string"
+														},
+														"cr":{
+															"type":"string"
+														},
+														"ir":{
+															"type":"string"
+														},
+														"ar":{
+															"type":"string"
+														},
+														"score": {
+															"type": "string"
+														}
+								            		}
+								          		}
+								    }
+								}
+							}
+						}
+			},"required": ["data_version","defi_id", "products", "problem_types", "references", "description"]
+}
