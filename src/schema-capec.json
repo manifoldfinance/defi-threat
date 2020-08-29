@@ -54,11 +54,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "source_name",
-                    "url",
-                    "external_id"
-                  ]
+                  "required": ["source_name", "url", "external_id"]
                 }
               ]
             },
@@ -98,10 +94,5 @@
       ]
     }
   },
-  "required": [
-    "type",
-    "id",
-    "spec_version",
-    "objects"
-  ]
+  "required": ["type", "id", "spec_version", "objects"]
 }
