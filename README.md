@@ -1,13 +1,9 @@
 # DeFi Threat Matrix
 
-<img src="assets/static_badge.svg?sanitize=true">
+
 ## Abstract
 
 This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please use attack for "normal" InfoSec/Dev/Sys security check-listing, this is ment to be specialized towards the unique issues brought about in blockchain/cryptocurrency applications (i.e. protocols).
-
-## Overview
-
-<img src="assets/schema.svg?sanitize=true" width=700>
 
 ## Overview of Threat Matrix
 
@@ -70,7 +66,7 @@ This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please us
 
 ## Token Mitigation
 
-See [APPENDIX](APPENDIX.md)
+[see `BEST PRACTICES`](TOKEN.md)
 
 ##### Tags
 
