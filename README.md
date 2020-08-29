@@ -4,9 +4,9 @@
 
 This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please use attack for "normal" InfoSec/Dev/Sys security check-listing, this is ment to be specialized towards the unique issues brought about in blockchain/cryptocurrency applications (i.e. protocols).
 
-## Usage
+## Overview
 
-[WIP](#)
+<img src="assets/schema.svg?sanitize=true" width=700>
 
 ## Overview of Threat Matrix
 
@@ -45,6 +45,63 @@ This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please us
 |                                  |                                  |                            |                            |                                                         |
 | Back\-Running                    |                                  |                            |                            |                                                         |
 
+
+## Survey on Ethereum Tools and Defenses 
+
+> source [A Survey on Ethereum Systems Security: Vulnerabilities, Attacks and Defenses](https://arxiv.org/abs/1908.04507)
+
+
+![](images/overview.png)
+
+<br>
+
+## Overview
+
+![](images/figure_1.png)
+
+<br>
+
+![](images/figure_2.png)
+
+<br>
+
+![](images/figure_3.png)
+
+<br>
+
+## Reactive && Proactive Defense
+
+#### Defenses
+
+Security enhancement
+Runtime verification
+Alternate languages
+Contract best practices
+Contract analyzer
+Blockchain protocols
+
+#### Best Practices
+
+Check, update, then interact
+Never delegatecall to untrusted contract
+Favor pull over push for external calls
+Never outsource critical function to other contracts
+Handle errors in external calls
+Include contract address and nonce in signature
+Accurately label the visibility of functions and variables
+Never use a contract balance as a guard
+Check the length of msg.data
+Use external sources of randomness via oracles
+Assure the correctness of the recipient address
+Never use block timestamp in condition checks
+Avoid looping over a data structure of unknown size
+Use the recent Solidity compiler version
+Use SafeMath library for arithmetic operations
+Use multi-factor authentication schemes for suicide
+Add authentication to functions involving Ether-transfer
+Use cryptographic commit-reveal schemes for secrecy
+Never use tx.origin for authorization
+
 ## Token Mitigation
 
 See [APPENDIX](APPENDIX.md)
@@ -67,4 +124,6 @@ Following files have defects: 14084. 14086. 14715. 13328. 13327. 13326. 13146. 1
 
 ## License
 
-Mozilla Public License 2.0
+Software Components under Mozilla Public License 2.0
+
+CVE/SWC are licensed under their respective authors licenses.

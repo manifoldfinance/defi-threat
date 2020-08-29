@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "spec_version": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "created_by_ref": {
+              "type": "string"
+            },
+            "created": {
+              "type": "string"
+            },
+            "modified": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "external_references": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "source_name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "external_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_name",
+                    "url",
+                    "external_id"
+                  ]
+                }
+              ]
+            },
+            "object_marking_refs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "x_capec_abstraction": {
+              "type": "string"
+            },
+            "x_capec_status": {
+              "type": "string"
+            },
+            "x_capec_version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "created_by_ref",
+            "created",
+            "modified",
+            "name",
+            "description",
+            "external_references",
+            "object_marking_refs",
+            "x_capec_abstraction",
+            "x_capec_status",
+            "x_capec_version"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "spec_version",
+    "objects"
+  ]
+}
