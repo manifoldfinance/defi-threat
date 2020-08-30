@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://defi-sec.com/schema.json",
+  "title": "DeFiSec Threat Matrix",
+  "description": "Schema for lists of DeFi Threats",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "credits": {
+      "type": "string"
+    },
+    "vulnerability_type": {
+      "type": "object",
+      "properties": {
+        "cwe": {
+          "type": "string"
+        },
+        "swc": {
+          "type": "string"
+        },
+        "defisec": {
+          "type": "integer"
+        }
+      },
+      "required": ["cwe", "swc", "defisec"]
+    },
+    "severity": {
+      "type": "number"
+    },
+    "affected": {
+      "type": "object",
+      "properties": {
+        "chainid": {
+          "type": "integer"
+        },
+        "contractName": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        }
+      },
+      "required": ["chainid", "contractName", "address"]
+    },
+    "signature": {
+      "type": "string"
+    },
+    "Catagories": {
+      "type": "string"
+    },
+    "scopes": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "tags": {
+      "type": "object",
+      "properties": {
+        "types": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": ["name", "description"]
+        }
+      },
+      "required": ["types"]
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "tokens": {
+      "type": "array",
+      "items": true
+    },
+    "Severity Status": {
+      "type": "object",
+      "properties": {
+        "Current": {
+          "type": "boolean"
+        },
+        "Mitigated": {
+          "type": "boolean"
+        },
+        "Remediated": {
+          "type": "boolean"
+        },
+        "Resolved": {
+          "type": "boolean"
+        }
+      },
+      "required": ["Current", "Mitigated", "Remediated", "Resolved"]
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "description",
+    "references",
+    "credits",
+    "vulnerability_type",
+    "severity",
+    "affected",
+    "signature",
+    "Catagories",
+    "scopes",
+    "tags",
+    "timestamp",
+    "tokens",
+    "Severity Status"
+  ]
+}
