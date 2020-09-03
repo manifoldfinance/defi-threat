@@ -1,7 +1,7 @@
 /**
  * Enum describing types of severity differences
  */
-import { Severity } from './types';
+import { Severity } from './types'
 
 export enum SeverityUpgrade {
   NONE,
@@ -16,21 +16,18 @@ export enum SeverityUpgrade {
  * @param base base list
  * @param update update to the list
  */
-export function getSeverityUpgrade(
-  base: Severity,
-  update: Severity
-): SeverityUpgrade {
+export function getSeverityUpgrade(base: Severity, update: Severity): SeverityUpgrade {
   if (update.major > base.major) {
-    return SeverityUpgrade.MAJOR;
+    return SeverityUpgrade.MAJOR
   }
   if (update.major < base.major) {
-    return SeverityUpgrade.NONE;
+    return SeverityUpgrade.NONE
   }
   if (update.minor > base.minor) {
-    return SeverityUpgrade.MINOR;
+    return SeverityUpgrade.MINOR
   }
   if (update.minor < base.minor) {
-    return SeverityUpgrade.NONE;
+    return SeverityUpgrade.NONE
   }
-  return update.patch > base.patch ? SeverityUpgrade.PATCH : SeverityUpgrade.NONE;
+  return update.patch > base.patch ? SeverityUpgrade.PATCH : SeverityUpgrade.NONE
 }
