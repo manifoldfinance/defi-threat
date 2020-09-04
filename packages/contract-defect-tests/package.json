@@ -1,0 +1,25 @@
+{
+  "name": "solidity-ci-analysis",
+  "version": "0.1.0",
+  "description": "in-flight exploit tracking",
+  "main": "decode_logs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solidity-ci/tooling.git"
+  },
+  "author": "SEE LICENSE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solidity-ci/tooling/issues"
+  },
+  "homepage": "https://github.com/solidity-ci/tooling#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "web3": "^1.2.11"
+  }
+}
