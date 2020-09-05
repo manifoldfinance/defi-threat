@@ -1,0 +1,42 @@
+{
+  "id": "DeFiSec-UniSwapHoneyPot",
+  "title": "Uniswap Honeypot Pair Listing",
+  "vector": "honeypot scam thats posting Uniswap pairs to siphon user funds",
+  "description": "Increments a counter, and you can make enough hops that you can buy the token on Uniswap, but you can resell it, you cant transfer it as it gets bricked",
+  "references": [
+    "https://www.eveem.org/code/0x029177c1fD6190A8DFc85d9A3E13bF78581Bd3D6",
+    "https://www.dextools.io/app/uniswap/pair-explorer/0xe45f865fed7c8c5d4574a4240b95dc1e493a871d",
+    "https://etherscan.io/find-similar-contracts?a=0x029177c1fd6190a8dfc85d9a3e13bf78581bd3d6&lvl=5",
+    "https://etherscan.io/address/0x1c72e0fbf8beb4e933c86cbb5d7b84879cd0fe69"
+  ],
+  "credits": [
+    "adrian | deepyr ",
+    "BokkyPoobah"
+  ],
+  "vulnerability_type": {
+    "defisec": "honeypot",
+    "cwe": "CWE-xxx",
+    "swc": "SWC-xxx"
+  },
+  "keywords": [
+    "uniswap",
+    "honeypot",
+    "tokens",
+    "dex",
+    "erc20",
+    "listing",
+    "siphon funds"
+  ],
+  "severity": 5.5,
+  "affected": {
+    "protocolInterface": "uniswapv2",
+    "contractName": "",
+    "address": "0x1c72e0fbf8beb4e933c86cbb5d7b84879cd0fe69",
+    "similar contracts": [
+      "0x1c72e0fbf8beb4e933c86cbb5d7b84879cd0fe69",
+      "0x029177c1fd6190a8dfc85d9a3e13bf78581bd3d6",
+      "0x029177c1fD6190A8DFc85d9A3E13bF78581Bd3D6"
+    ]
+  },
+  "signature": null
+}
