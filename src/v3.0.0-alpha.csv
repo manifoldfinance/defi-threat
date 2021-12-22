@@ -1,0 +1,33 @@
+,,,,
+Market Attacks,Economic Attack,Off-Chain,On-Chain,Solidity
+Front-Running,Front-Running,Price Feed,Timestamp Dependence,Integer Overflow and Underflow
+Coordinated Attack,Insufficient gas griefing,Quote Stuffing,Admin Key,DoS with (Unexpected) revert
+Liquidity Pocket,Token Inflation,Spoofing,Timelock,DoS with Block Gas Limit
+Quote Stuffing,Circulating Supply Attack,Credential Access,Lateral Movements,Arithmetic Over/Under Flows
+Wash Trading,Gas Griefing (DoS),Reentrancy,Multi-Sig Keys,Forcibly Sending Ether to a Contract
+Ramping The Market,Network Congestion (uDoS),Privilage Esclation,Miner Cartel,Delegatecall
+Cornering The Market,Liquidity Squeeze,Credential Access,Finality,Entropy Illusion
+Churning ,Governance Cartels,Encryption Protections,Honeypot,Short Address/Parameter Attack
+Flash Loans,Interlocking Directorate,Phishing,Red Queen,Uninitialised Storage Pointers
+Aggregated Transactions,Governance Attack,Unicode Exploits,Sole block synchronization,Floating Points and Numerical Precision
+Bulge Bracket Transactions,Slippage Exploit,API,Transaction Pool,Right-To-Left-Override control character (U+202E)
+Layering,Safety Check Exploits,DNS Attacks,,Delegatecall to Untrusted Callee
+Spoofing,Circulating Supply Dump,Transaction Pool,,Requirement Violation
+Order Book,"Flash ""Straddle"" ",Checksum Address,Performance Fee Minting,Shadowing State Variables
+Market Index Calculation Attack,Structuring ,Siphon Funds ,,Transaction Order Dependence
+Flash Crash,Stalking Horse,Influencers',,Assert Violation
+Repo,Like Asset Price Divergance,Synthetic Mint Spread,Block Producer Cartel,Uninitialized Storage Pointer
+Excessive Leverage,Reserve Asset Liquidity Manipulation,Syscall Exploit,Unlimited Permissions on Token Approval,Unprotected Ether Withdrawal
+"Breaking the ""Buck""",Stable Reserve Asset Manipulation ,Container Priv. Esclation ,,Floating Pragma
+"""Fake"" News",Price Induced Oracle Volatility,Keyctl missuse (syscall),,Outdated Compiler Version
+Nested Bot ,,,,Function Default Visibility
+Audience of Bots,,,,msg.sender
+Arb. Exploit,,,,Wallet Balance
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+Back-Running ,,,,
