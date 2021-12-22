@@ -1,9 +1,9 @@
 {
   "name": "defi-threat-matrix",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "decentralized econometric threat and security assesment",
   "main": "index.js",
-  "repository": "https://github.com/freight-trust/defi-sec",
+  "repository": "https://github.com/manifoldfinance/defi-threat",
   "author": "sam bacha <sam@freighttrust.com>",
   "license": "MPL-2.0",
   "private": false,
@@ -11,18 +11,7 @@
     "lint": "eslint . --ext .json,.js"
   },
   "dependencies": {
-    "js-yaml": "^3.14.0",
-    "yaml": "^1.10.0",
-    "yargs": "^15.4.1"
   },
   "devDependencies": {
-    "ajv-cli": "^3.2.1",
-    "coveralls": "^3.1.0",
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-json": "^2.1.2",
-    "lerna": "^3.22.1",
-    "yaml-convert": "^1.0.0"
   }
 }
