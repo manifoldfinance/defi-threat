@@ -1,0 +1,418 @@
+{| class="wikitable" 
+|- style="font-style:italic; font-weight:bold;"
+! Market
+! Attacks,Economic
+! Attack,Off-Chain,On-Chain,Solidity
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+! 
+|-
+| Front-Running,Front-Running,Price
+| Feed,Timestamp
+| Dependence,Integer
+| Overflow
+| and
+| Underflow
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Coordinated
+| Attack,Insufficient
+| gas
+| griefing,Quote
+| Stuffing,Admin
+| Key,DoS
+| with
+| (Unexpected)
+| revert
+| 
+| 
+| 
+|-
+| Liquidity
+| Pocket,Token
+| Inflation,Spoofing,Timelock,DoS
+| with
+| Block
+| Gas
+| Limit
+| 
+| 
+| 
+| 
+| 
+|-
+| Quote
+| Stuffing,Circulating
+| Supply
+| Attack,Credential
+| Access,Lateral
+| Movements,Arithmetic
+| Over/Under
+| Flows
+| 
+| 
+| 
+| 
+|-
+| Wash
+| Trading,Gas
+| Griefing
+| (DoS),Reentrancy,Multi-Sig
+| Keys,Forcibly
+| Sending
+| Ether
+| to
+| a
+| Contract
+| 
+| 
+|-
+| Ramping
+| The
+| Market,Network
+| Congestion
+| (uDoS),Privilage
+| Esclation,Miner
+| Cartel,Delegatecall
+| 
+| 
+| 
+| 
+| 
+|-
+| Cornering
+| The
+| Market,Liquidity
+| Squeeze,Credential
+| Access,Finality,Entropy
+| Illusion
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Churning
+| ,Smurfing,Encryption
+| Protections,Honeypot,Short
+| Address/Parameter
+| Attack
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Flash
+| Loans,Like
+| Asset
+| Price
+| Divergance,Phishing,Red
+| Queen,Uninitialised
+| Storage
+| Pointers
+| 
+| 
+| 
+| 
+|-
+| Aggregated
+| Transactions,Price
+| Induced
+| Oracle
+| Volatility,Unicode
+| Exploits,Sole
+| block
+| synchronization,Floating
+| Points
+| and
+| Numerical
+| Precision
+|-
+| Bulge
+| Bracket
+| Transactions,Stalking
+| Horse,API,Transaction
+| Pool,Right-To-Left-Override
+| control
+| character
+| (U+202E)
+| 
+| 
+| 
+| 
+|-
+| Layering,Blockchain
+| Transaction
+| Based,DNS
+| Attacks,,Delegatecall
+| to
+| Untrusted
+| Callee
+| 
+| 
+| 
+| 
+| 
+|-
+| Spoofing,Governance
+| Attack,Transaction
+| Pool,,Requirement
+| Violation
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Order
+| Book,Interlocking
+| Directorate,Checksum
+| Address,,Shadowing
+| State
+| Variables
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Market
+| Index
+| Calculation
+| Attack,Governance
+| Cartels,Siphon
+| Funds
+| ,,Transaction
+| Order
+| Dependence
+| 
+| 
+| 
+|-
+| Flash
+| Crash,,,,Assert
+| Violation
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Repo,,Synthetic
+| Mint
+| Spread,,Uninitialized
+| Storage
+| Pointer
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Excessive
+| Leverage,,Syscall
+| Exploit,,Unprotected
+| Ether
+| Withdrawal
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Breaking the "Buck",,Container
+| Priv.
+| Esclation
+| ,,Floating
+| Pragma
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| "Fake" News,,Keyctl
+| missuse
+| (syscall),,Outdated
+| Compiler
+| Version
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Nested
+| Bot
+| ,,Unlimited
+| Permissions
+| on
+| Token
+| Approval,,Function
+| Default
+| Visibility
+| 
+| 
+| 
+|-
+| Audience
+| of
+| Bots,,Influencers',,msg.sender
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Arb.
+| Exploit,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Slippage
+| Exploit,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Safety
+| Check
+| Exploits,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Circulating
+| Supply
+| Dump,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Governance
+| Cartel,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Flash "Straddle" ,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Structuring
+| ,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| ,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+| Back-Running
+| ,,,,
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+|}

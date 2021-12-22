@@ -8,10 +8,13 @@
   "license": "MPL-2.0",
   "private": false,
   "scripts": {
-    "lint": "eslint . --ext .json,.js"
   },
   "dependencies": {
   },
   "devDependencies": {
-  }
+  },
+"files": [
+"DEFI_THREAT_MATRIX.mediawiki",
+"README.md"
+]
 }

@@ -1,6 +1,9 @@
 # DeFi Threat Matrix
 
 
+- v3 of the DeFi Matrix will be released in January
+
+- v1 and v2 can be found below
 ## Abstract
 
 This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please use attack for "normal" InfoSec/Dev/Sys security check-listing, this is ment to be specialized towards the unique issues brought about in blockchain/cryptocurrency applications (i.e. protocols).
@@ -42,47 +45,20 @@ This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please us
 |                                  |                                  |                            |                            |                                                         |
 | Back\-Running                    |                                  |                            |                            |                                                         |
 
-## Survey on Ethereum Tools and Defenses
+## Contributions and Acknowledgements
 
-> source [A Survey on Ethereum Systems Security: Vulnerabilities, Attacks and Defenses](https://arxiv.org/abs/1908.04507)
-
-![](images/overview.png)
-
-<br>
-
-## Overview
-
-![](images/figure_1.png)
-
-<br>
-
-![](images/figure_2.png)
-
-<br>
-
-![](images/figure_3.png)
-
-<br>
-
-## Token Mitigation
-
-[see `BEST PRACTICES`](TOKEN.md)
-
-##### Tags
-
-Should tags for "potential" attacks or attacks that have been successful be utilized, and if so how implemented, simply open an issue.
-
-### TODO
-
-Following files have defects: 14084. 14086. 14715. 13328. 13327. 13326. 13146. 13144. 13113. 12230. 11687. 10973. 10769. 10468. 18665. 18665. 14715. 14086. 14084. 13146. 13144. 13113. 12230. 11687. 10973. 10769. 10468. 10299.
-
-.github/
-ISSUE_TEMPLATE
-specific for new creations
-
-## Sheet
+Ali Atiia
+John Mardlin
+Raul	
+Jack	
+samczsun	
+Sam Bacha	
+James Zaki
+### v1 Sheet
 
 [DeFi Sec Matrix Sheet](https://docs.google.com/spreadsheets/d/1St4BXWpeZdcDaH5Z4nnODrerFAxfdZ4OuHofI-EbKGc/edit?usp=sharing)
+
+### v2 Sheet
 
 [DeFi Sec Page](https://docs.google.com/spreadsheets/d/e/2PACX-1vR5UnBx4M9sg43fO76eWetena1L-4zo82lqsJuMR3uuZPe7luRnakG8jZPG0YbnSDtUOY5nVgSdwpc1/pubhtml)
 
