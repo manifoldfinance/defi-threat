@@ -1,0 +1,31 @@
+,,,,
+Market Attacks,Economic Attack,Off-Chain,On-Chain,Solidity
+Coordinated Attack,Front-Running,Price Feed,Timestamp Dependence,Integer Overflow and Underflow
+Liquidity Pocket,Insufficient gas griefing,Quote Stuffing,Admin Key,DoS with (Unexpected) revert
+Quote Stuffing,Token Inflation,Spoofing,Timelock,DoS with Block Gas Limit
+Wash Trading,Circulating Supply Attack,Credential Access,Lateral Movements,Arithmetic Over/Under Flows
+Ramping The Market,Gas Griefing (DoS),Reentrancy,Multi-Sig Keys,Forcibly Sending Ether to a Contract
+Cornering The Market,Network Congestion (uDoS),Privilage Esclation,Miner Cartel,Delegatecall
+Churning ,Liquidity Squeeze,Credential Access,Finality,Entropy Illusion
+Flash Loans,Governance Cartels,Encryption Protections,Honeypot,Short Address/Parameter Attack
+Aggregated Transactions,Stalking Horse,Phishing,Red Queen,Uninitialised Storage Pointers
+Bulge Bracket Transactions,Like Asset Price Divergance,Unicode Exploits,Sole block synchronization,Floating Points and Numerical Precision
+Layering,Reserve Asset Liquidity Manipulation,API,Transaction Pool,Right-To-Left-Override control character (U+202E)
+Spoofing,Stable Reserve Asset Manipulation ,DNS Attacks,Performance Fee Minting,Delegatecall to Untrusted Callee
+Order Book,Price Induced Oracle Volatility,Transaction Pool,Block Producer Cartel,Requirement Violation
+Market Index Calculation Attack,Cascading Validation,Checksum Address,Unlimited Permissions on Token Approval,Shadowing State Variables
+Flash Crash,,Siphon Funds ,Sandwhich Attack,Transaction Order Dependence
+Repo,,Interlocking Directorate,Front Running,Assert Violation
+Excessive Leverage,,Synthetic Mint Spread,Back Running,Uninitialized Storage Pointer
+"Breaking the ""Buck""",,Syscall Exploit,FIFO/LIFO,Unprotected Ether Withdrawal
+Nested Bot ,,Container Priv. Esclation ,Block Construction ,Floating Pragma
+Audience of Bots,,Keyctl missuse (syscall),,Outdated Compiler Version
+Slippage Exploit,,Influencers',,Function Default Visibility
+Safety Check Exploits,,Governance Attack,,msg.sender
+Circulating Supply Dump,,"""Fake"" News",,
+"Flash ""Straddle"" ",,,,
+Structuring ,,,,
+,,,,
+,,,,
+,,,,
+Back-Running ,,,,

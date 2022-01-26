@@ -1,12 +1,15 @@
 # DeFi Threat Matrix
 
-
 - v3 of the DeFi Matrix will be released in January
 
 - v1 and v2 can be found below
+
 ## Abstract
 
-This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please use attack for "normal" InfoSec/Dev/Sys security check-listing, this is ment to be specialized towards the unique issues brought about in blockchain/cryptocurrency applications (i.e. protocols).
+This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please
+use attack for "normal" InfoSec/Dev/Sys security check-listing, this is ment to
+be specialized towards the unique issues brought about in
+blockchain/cryptocurrency applications (i.e. protocols).
 
 ## Overview of Threat Matrix
 
@@ -47,13 +50,8 @@ This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please us
 
 ## Contributions and Acknowledgements
 
-Ali Atiia
-John Mardlin
-Raul	
-Jack	
-samczsun	
-Sam Bacha	
-James Zaki
+Ali Atiia John Mardlin Raul Jack samczsun Sam Bacha James Zaki
+
 ### v1 Sheet
 
 [DeFi Sec Matrix Sheet](https://docs.google.com/spreadsheets/d/1St4BXWpeZdcDaH5Z4nnODrerFAxfdZ4OuHofI-EbKGc/edit?usp=sharing)

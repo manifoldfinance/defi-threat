@@ -8,8 +8,9 @@
   "license": "MPL-2.0",
   "private": false,
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
   "files": [
     "src/DEFI_THREAT_MATRIX.mediawiki",
     "README.md",
