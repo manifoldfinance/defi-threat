@@ -48,6 +48,14 @@ blockchain/cryptocurrency applications (i.e. protocols).
 |                                  |                                  |                            |                            |                                                         |
 | Back\-Running                    |                                  |                            |                            |                                                         |
 
+
+## UML Diagrams of Real World Attacks 
+
+### Example: Fake Trading Volume on UniswapV2
+
+![](https://d.pr/i/5vsXd4.jpeg)
+
+
 ## Contributions and Acknowledgements
 
 Ali Atiia John Mardlin Raul Jack samczsun Sam Bacha James Zaki
