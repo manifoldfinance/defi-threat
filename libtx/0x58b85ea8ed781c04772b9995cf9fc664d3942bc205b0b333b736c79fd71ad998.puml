@@ -1,0 +1,19 @@
+@startuml
+title 0x58b85ea8ed781c04772b9995cf9fc664d3942bc205b0b333b736c79fd71ad998
+caption  Mon, 06 Dec 2021 13:29:11 GMT
+participant "0x2de8..1c85" as 2de81c85 
+participant "0x95b0..32a8" as 95b032a8 <<Sushi 2.0  by 0xMaki (SUSHI2)>>
+
+note over 2de81c85
+Nonce: 7
+Gas Price: 73.429908764 Gwei
+Gas Limit: 2,928,298
+Gas Used: 2,928,298
+Tx Fee: 0.215 ETH
+end note
+
+2de81c85 ->o 95b032a8: constructor(?)\n2,659,734 gas
+activate 95b032a8
+return
+
+@endumls

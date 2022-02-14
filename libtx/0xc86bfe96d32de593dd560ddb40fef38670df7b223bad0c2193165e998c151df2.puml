@@ -1,0 +1,171 @@
+@startuml
+title 0xc86bfe96d32de593dd560ddb40fef38670df7b223bad0c2193165e998c151df2
+caption  Sat, 25 Dec 2021 15:50:51 GMT
+participant "0xd20e..a1a4" as d20ea1a4 
+participant "0x4fc5..42a6" as 4fc542a6 <<StrategyBarnDAOStaking>>
+participant "0xf6d8..cff0" as f6d8cff0 <<StrategyBarnDAOStaking>>
+participant "0x6d76..0390" as 6d760390 <<SUSHI yVault (yvSUSHI)>><<Yearn Token Vault>>
+participant "0x9c13..89f4" as 9c1389f4 <<Yearn Token Vault>>
+participant "0x6b35..0fe2" as 6b350fe2 <<SushiToken (SUSHI)>><<SushiToken>>
+participant "0xccb0..f5b8" as ccb0f5b8 <<YieldFarmGenericToken>>
+participant "0x7b39..505d" as 7b39505d <<LeagueDAO Governance Token (LEAG)>><<LEAG>>
+participant "0x4392..4f95" as 43924f95 <<Staking>>
+participant "0xddce..f012" as ddcef012 <<CommonHealthCheck>>
+
+note over d20ea1a4
+Nonce: 183
+Gas Price: 49.421269358 Gwei
+Gas Limit: 450,381
+Gas Used: 263,666
+Tx Fee: 0.013 ETH
+end note
+
+d20ea1a4 -> 4fc542a6: harvest()\n274,902 gas
+activate 4fc542a6
+4fc542a6 ->> f6d8cff0: harvest()\n272,239 gas
+activate f6d8cff0 #809ECB
+4fc542a6 -[#3471CD]> 6d760390: debtOutstanding()\n22,545 gas
+activate 6d760390
+6d760390 ->> 9c1389f4: debtOutstanding()\n19,879 gas
+activate 9c1389f4 #809ECB
+6d760390 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x6d76..0390)\n2,578 gas
+activate 6b350fe2
+return\n16,407,,379,729,253,354,797,514
+return\n0
+note right of 9c1389f4: \n17,301 gas
+return\n0
+note right of 6d760390: \n2,666 gas
+4fc542a6 -[#3471CD]> ccb0f5b8: massHarvest()\n9,536 gas
+activate ccb0f5b8
+return\n0
+4fc542a6 -[#3471CD]> 7b39505d: balanceOf(\naccount: 0x4FC5..42A6)\n2,651 gas
+activate 7b39505d
+return\n0
+4fc542a6 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x4FC5..42A6)\n2,578 gas
+activate 6b350fe2
+return\n0
+4fc542a6 -[#3471CD]> 43924f95: balanceOf(\nuser: 0x4FC5..42A6,\ntoken: 0x6B35..0fE2)\n2,638 gas
+activate 43924f95
+return\n164,990,,547,273,291,141,967,868
+4fc542a6 -[#3471CD]> 6d760390: strategies(\narg0: 0x4FC5..42A6)\n17,890 gas
+activate 6d760390
+6d760390 ->> 9c1389f4: strategies(\narg0: 0x4FC5..42A6)\n17,673 gas
+activate 9c1389f4 #809ECB
+return\nperformanceFee: 1,000,\nactivation: 1,634,587,974,\ndebtRatio: 10,000,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,927,310,\ntotalDebt: 164,990,,547,273,291,141,967,868,\ntotalGain: 4,836,,965,578,325,734,294,606,\ntotalLoss: 0
+return\nperformanceFee: 1,000,\nactivation: 1,634,587,974,\ndebtRatio: 10,000,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,927,310,\ntotalDebt: 164,990,,547,273,291,141,967,868,\ntotalGain: 4,836,,965,578,325,734,294,606,\ntotalLoss: 0
+note right of 6d760390: \n217 gas
+4fc542a6 -[#3471CD]> 6d760390: strategies(\narg0: 0x4FC5..42A6)\n3,890 gas
+activate 6d760390
+6d760390 ->> 9c1389f4: strategies(\narg0: 0x4FC5..42A6)\n3,673 gas
+activate 9c1389f4 #809ECB
+return\nperformanceFee: 1,000,\nactivation: 1,634,587,974,\ndebtRatio: 10,000,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,927,310,\ntotalDebt: 164,990,,547,273,291,141,967,868,\ntotalGain: 4,836,,965,578,325,734,294,606,\ntotalLoss: 0
+return\nperformanceFee: 1,000,\nactivation: 1,634,587,974,\ndebtRatio: 10,000,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,927,310,\ntotalDebt: 164,990,,547,273,291,141,967,868,\ntotalGain: 4,836,,965,578,325,734,294,606,\ntotalLoss: 0
+note right of 6d760390: \n217 gas
+4fc542a6 -[#3471CD]> 6d760390: report(\ngain: 0,\nloss: 0,\n_debtPayment: 0)\n63,730 gas
+activate 6d760390
+6d760390 ->> 9c1389f4: report(\ngain: 0,\nloss: 0,\n_debtPayment: 0)\n63,546 gas
+activate 9c1389f4 #809ECB
+6d760390 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x4FC5..42A6)\n578 gas
+activate 6b350fe2
+return\n0
+6d760390 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x6d76..0390)\n578 gas
+activate 6b350fe2
+return\n16,407,,379,729,253,354,797,514
+6d760390 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x6d76..0390)\n578 gas
+activate 6b350fe2
+return\n16,407,,379,729,253,354,797,514
+6d760390 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x6d76..0390)\n578 gas
+activate 6b350fe2
+return\n16,407,,379,729,253,354,797,514
+6d760390 -[#3471CD]> 6b350fe2: transfer(\nrecipient: 0x4FC5..42A6,\namount: 16,407,,379,729,253,354,797,514)\n26,025 gas
+activate 6b350fe2
+return\ntrue
+return\n0
+note right of 9c1389f4: \n35,209 gas
+return\n0
+note right of 6d760390: \n184 gas
+4fc542a6 -[#3471CD]> 6b350fe2: balanceOf(\naccount: 0x4FC5..42A6)\n578 gas
+activate 6b350fe2
+return\n16,407,,379,729,253,354,797,514
+4fc542a6 -[#3471CD]> 43924f95: deposit(\ntokenAddress: 0x6B35..0fE2,\namount: 16,407,,379,729,253,354,797,514)\n89,872 gas
+activate 43924f95
+43924f95 -> 6b350fe2: allowance(\nowner: 0x4FC5..42A6,\nspender: 0x4392..4F95)\n2,594 gas
+activate 6b350fe2
+return\n115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,563,682,496,,083,613,893,763,430,586
+43924f95 -> 6b350fe2: transferFrom(\nsender: 0x4FC5..42A6,\nrecipient: 0x4392..4F95,\namount: 16,407,,379,729,253,354,797,514)\n13,680 gas
+activate 6b350fe2
+return\ntrue
+43924f95 -> 6b350fe2: balanceOf(\naccount: 0x4392..4F95)\n578 gas
+activate 6b350fe2
+return\n886,052,,227,023,864,454,958,746
+return
+note right of 43924f95: \n73,020 gas
+4fc542a6 -[#3471CD]> ddcef012: check(\nprofit: 0,\nloss: 0,\ndebtPayment: 0,\ndebtOutstanding: 0,\ntotalDebt: 164,990,,547,273,291,141,967,868)\n13,720 gas
+activate ddcef012
+return\ntrue
+return
+note right of f6d8cff0: \n42,611 gas
+return
+note right of 4fc542a6: \n2,663 gas
+
+note over 4fc542a6 #aqua
+Harvested:
+profit: 0,
+loss: 0,
+debtPayment: 0,
+debtOutstanding: 0
+Harvested:
+profit: 0,
+loss: 0,
+debtPayment: 0,
+debtOutstanding: 0
+end note
+note over 6d760390 #aqua
+StrategyReported:
+strategy: 0x4FC5..42A6,
+gain: 0,
+loss: 0,
+debtPaid: 0,
+totalGain: 4,836,,965,578,325,734,294,606,
+totalLoss: 0,
+totalDebt: 181,397,,927,002,544,496,765,382,
+debtAdded: 16,407,,379,729,253,354,797,514,
+debtRatio: 10,000
+StrategyReported:
+strategy: 0x4FC5..42A6,
+gain: 0,
+loss: 0,
+debtPaid: 0,
+totalGain: 4,836,,965,578,325,734,294,606,
+totalLoss: 0,
+totalDebt: 181,397,,927,002,544,496,765,382,
+debtAdded: 16,407,,379,729,253,354,797,514,
+debtRatio: 10,000
+end note
+note over 6b350fe2 #aqua
+Transfer:
+from: 0x6d76..0390,
+to: 0x4FC5..42A6,
+value: 16,407,,379,729,253,354,797,514
+Transfer:
+from: 0x4FC5..42A6,
+to: 0x4392..4F95,
+value: 16,407,,379,729,253,354,797,514
+Approval:
+owner: 0x4FC5..42A6,
+spender: 0x4392..4F95,
+value: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,563,666,088,,703,884,640,408,633,072
+end note
+note over ccb0f5b8 #aqua
+MassHarvest:
+user: 0x4FC5..42A6,
+epochsHarvested: 0,
+totalValue: 0
+end note
+note over 43924f95 #aqua
+Deposit:
+user: 0x4FC5..42A6,
+tokenAddress: 0x6B35..0fE2,
+amount: 16,407,,379,729,253,354,797,514
+end note
+@endumls

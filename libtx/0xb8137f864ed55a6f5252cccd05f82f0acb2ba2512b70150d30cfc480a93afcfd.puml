@@ -1,0 +1,395 @@
+@startuml
+title 0xb8137f864ed55a6f5252cccd05f82f0acb2ba2512b70150d30cfc480a93afcfd
+caption  Mon, 27 Dec 2021 01:19:00 GMT
+participant "0x621b..ed2f" as 621bed2f 
+participant "0x1638..0ff7" as 16380ff7 <<Proxy>>
+participant "0xd9db..9552" as d9db9552 <<GnosisSafe>>
+participant "0x40a2..130d" as 40a2130d <<MultiSendCallOnly>>
+participant "0x7da9..87a7" as 7da987a7 <<USDT yVault (yvUSDT)>><<Yearn Token Vault>>
+participant "0xa696..6c7e" as a6966c7e <<WBTC yVault (yvWBTC)>><<Yearn Token Vault>>
+participant "0x3ef6..92eb" as 3ef692eb <<Strategy>>
+participant "0x9cff..a7ec" as 9cffa7ec <<Strategy>>
+participant "0xdac1..1ec7" as dac11ec7 <<Tether USD (USDT)>><<TetherToken>>
+participant "0xba12..f2c8" as ba12f2c8 <<Vault>>
+participant "0x06df..1b42" as 06df1b42 <<Balancer USD Stable Pool (staBAL3)>><<StablePool>>
+participant "0xce88..9f9f" as ce889f9f <<ProtocolFeesCollector>>
+participant "0xba10..4e3d" as ba104e3d <<Balancer (BAL)>><<BalancerGovernanceToken>>
+participant "0x5c6e..8f56" as 5c6e8f56 <<Balancer 80 BAL 20 WETH (B-80BAL-20WETH)>><<WeightedPool2Tokens>>
+participant "0x9664..b6f8" as 9664b6f8 <<Balancer 50 USDC 50 WETH (B-50USDC-50WETH)>><<WeightedPool2Tokens>>
+participant "0xddce..f012" as ddcef012 <<CommonHealthCheck>>
+
+note over 621bed2f
+Nonce: 120
+Gas Price: 78.001422122 Gwei
+Gas Limit: 3,000,000
+Gas Used: 1,047,660
+Tx Fee: 0.082 ETH
+end note
+
+621bed2f --> 16380ff7: execTransaction(\nto: 0x40A2..130D,\nvalue: 0,\ndata: 0x8d80ff0a0..020..0f2007da96a3891add058ada2e826306d812c638d87a70..\n0447c6a4f240..03ef6ec70d4d8fe69365c92086d470bb7d5fc92eb0..0708003e\nf6ec70d4d8fe69365c92086d470bb7d5fc92eb0..044641257d0..0,\noperation: 1,\nsafeTxGas: 0,\nbaseGas: 0,\ngasPrice: 0,\ngasToken: 0x0000..0000,\nrefundReceiver: 0x0000..0000,\nsignatures: 0x6144fe56d1593d31bd280d34e4e5ae4d11e7d78ba2c244e8adf5bfa1b150eaf4\n4aa5ab1378ecf1f2c79a1f66bb3af0108602c6c20bdaf694326abaf2ddfaa3b91b\n0..0621bcfaa87ba0b7c57ca49e1bb1a8b917c34ed2f0..01feac123f58c984c77\n0f62c31fe3e1f776620539da46f3b55eefdbf99eb1b2e061f67aac467f6bea0be2\na9fb09131f40976cca51d789caa7c0b73bd2182b143ce1b)\n1,072,672 gas
+activate 16380ff7
+16380ff7 ->> d9db9552: execTransaction(\nto: 0x40A2..130D,\nvalue: 0,\ndata: 0x8d80ff0a0..020..0f2007da96a3891add058ada2e826306d812c638d87a70..\n0447c6a4f240..03ef6ec70d4d8fe69365c92086d470bb7d5fc92eb0..0708003e\nf6ec70d4d8fe69365c92086d470bb7d5fc92eb0..044641257d0..0,\noperation: 1,\nsafeTxGas: 0,\nbaseGas: 0,\ngasPrice: 0,\ngasToken: 0x0000..0000,\nrefundReceiver: 0x0000..0000,\nsignatures: 0x6144fe56d1593d31bd280d34e4e5ae4d11e7d78ba2c244e8adf5bfa1b150eaf4\n4aa5ab1378ecf1f2c79a1f66bb3af0108602c6c20bdaf694326abaf2ddfaa3b91b\n0..0621bcfaa87ba0b7c57ca49e1bb1a8b917c34ed2f0..01feac123f58c984c77\n0f62c31fe3e1f776620539da46f3b55eefdbf99eb1b2e061f67aac467f6bea0be2\na9fb09131f40976cca51d789caa7c0b73bd2182b143ce1b)\n1,067,666 gas
+activate d9db9552 #809ECB
+16380ff7 -[#3471CD]>> 40a2130d: multiSend(\ntransactions: 0x007da96a3891add058ada2e826306d812c638d87a70..0447c6a4f240..03ef6\nec70d4d8fe69365c92086d470bb7d5fc92eb0..0708003ef6ec70d4d8fe69365c9\n2086d470bb7d5fc92eb0..044641257d)\n1,035,838 gas
+activate 40a2130d #809ECB
+16380ff7 -[#3471CD]> 7da987a7: updateStrategyDebtRatio(\nstrategy: 0x3ef6..92Eb,\ndebtRatio: 1,800)\n22,446 gas
+activate 7da987a7
+7da987a7 ->> a6966c7e: updateStrategyDebtRatio(\nstrategy: 0x3ef6..92Eb,\ndebtRatio: 1,800)\n19,771 gas
+activate a6966c7e #809ECB
+return
+return
+note right of 7da987a7: \n2,675 gas
+16380ff7 -[#3471CD]> 3ef692eb: harvest()\n1,007,085 gas
+activate 3ef692eb
+3ef692eb ->> 9cffa7ec: harvest()\n1,004,422 gas
+activate 9cffa7ec #809ECB
+3ef692eb -[#3471CD]> 7da987a7: debtOutstanding()\n20,615 gas
+activate 7da987a7
+7da987a7 ->> a6966c7e: debtOutstanding()\n20,449 gas
+activate a6966c7e #809ECB
+7da987a7 -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x7Da9..87a7)\n5,031 gas
+activate dac11ec7
+return\n15,905,406,486,034
+return\n0
+note right of a6966c7e: \n15,418 gas
+return\n0
+note right of 7da987a7: \n166 gas
+3ef692eb -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x3ef6..92Eb)\n3,031 gas
+activate dac11ec7
+return\n0
+3ef692eb -[#3471CD]> ba12f2c8: getPoolTokens(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063)\n21,574 gas
+activate ba12f2c8
+return\ntokens: [\n  0: 0x6B17..1d0F,\n  1: 0xA0b8..eB48,\n  2: 0xdAC1..1ec7],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,935,304,757,382,\n  2: 31,412,653,711,369],\nlastChangeBlock: 13,884,227
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n2,374 gas
+activate 06df1b42
+return\n144,033,495,,636,192,814,061,620,680
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n2,644 gas
+activate 06df1b42
+return\n10,173,467,,233,784,036,191,654,826
+3ef692eb -[#3471CD]> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0x6B17..1d0F,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 3,981,778,,823,207,769,525,944,228,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,227,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,935,304,757,382,\n  2: 31,412,653,711,369],\nindexIn: 0,\nindexOut: 2)\n34,518 gas
+activate 06df1b42
+return\n3,979,007,418,646
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n144,033,495,,636,192,814,061,620,680
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n10,173,467,,233,784,036,191,654,826
+3ef692eb -[#3471CD]> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0xA0b8..eB48,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 4,021,491,354,051,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,227,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,935,304,757,382,\n  2: 31,412,653,711,369],\nindexIn: 1,\nindexOut: 2)\n30,518 gas
+activate 06df1b42
+return\n4,018,663,115,838
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n144,033,495,,636,192,814,061,620,680
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n10,173,467,,233,784,036,191,654,826
+3ef692eb -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x3ef6..92Eb)\n1,031 gas
+activate dac11ec7
+return\n0
+3ef692eb -[#3471CD]> 7da987a7: strategies(\narg0: 0x3ef6..92Eb)\n15,942 gas
+activate 7da987a7
+7da987a7 ->> a6966c7e: strategies(\narg0: 0x3ef6..92Eb)\n15,725 gas
+activate a6966c7e #809ECB
+return\nperformanceFee: 1,000,\nactivation: 1,634,256,439,\ndebtRatio: 1,800,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,727,090,\ntotalDebt: 10,212,108,430,881,\ntotalGain: 325,435,234,744,\ntotalLoss: 0
+return\nperformanceFee: 1,000,\nactivation: 1,634,256,439,\ndebtRatio: 1,800,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,727,090,\ntotalDebt: 10,212,108,430,881,\ntotalGain: 325,435,234,744,\ntotalLoss: 0
+note right of 7da987a7: \n217 gas
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n10,173,467,,233,784,036,191,654,826
+3ef692eb -[#3471CD]> ba12f2c8: exitPool(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\nsender: 0x3ef6..92Eb,\nrecipient: 0x3ef6..92Eb,\nrequest: [\n  assets: [\n    0: 0x6B17..1d0F,\n    1: 0xA0b8..eB48,\n    2: 0xdAC1..1ec7],\n  minAmountsOut: [\n    0: 0,\n    1: 0,\n    2: 0],\n  userData: 0x0..020..060..086a50c38a4b11b6e853aa0..030..01018d9775,\n  toInternalBalance: false])\n156,115 gas
+activate ba12f2c8
+ba12f2c8 -> ce889f9f: getSwapFeePercentage()\n2,351 gas
+activate ce889f9f
+return\n0
+ba12f2c8 -> 06df1b42: onExitPool(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\nsender: 0x3ef6..92Eb,\nrecipient: 0x3ef6..92Eb,\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,935,304,757,382,\n  2: 31,412,653,711,369],\nlastChangeBlock: 13,884,227,\nprotocolSwapFeePercentage: 0,\nuserData: 0x0..020..060..086a50c38a4b11b6e853aa0..030..01018d9775)\n71,645 gas
+activate 06df1b42
+return\n[\n  0: 0,\n  1: 0,\n  2: 4,321,023,861],\n[\n  0: 0,\n  1: 0,\n  2: 0]
+ba12f2c8 -> dac11ec7: transfer(\n_to: 0x3ef6..92Eb,\n_value: 4,321,023,861)\n37,601 gas
+activate dac11ec7
+return
+return
+note right of ba12f2c8: \n44,518 gas
+3ef692eb -[#3471CD]> ba104e3d: balanceOf(\naccount: 0x3ef6..92Eb)\n2,542 gas
+activate ba104e3d
+return\n1,766,,929,110,350,000,000,000
+3ef692eb -[#3471CD]> ba104e3d: decimals()\n2,473 gas
+activate ba104e3d
+return\n18
+3ef692eb -[#3471CD]> dac11ec7: decimals()\n2,484 gas
+activate dac11ec7
+return\n6
+3ef692eb -[#3471CD]> ba12f2c8: batchSwap(\nkind: ,\nswaps: [\n  0: [\n    poolId: 0x5c6ee304399dbdb9c8ef030ab642b10820db8f5600020..014,\n    assetInIndex: 0,\n    assetOutIndex: 1,\n    amount: 1,766,,929,110,350,000,000,000,\n    userData: 0x0..0],\n  1: [\n    poolId: 0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f800020..019,\n    assetInIndex: 1,\n    assetOutIndex: 2,\n    amount: 0,\n    userData: 0x0..0],\n  2: [\n    poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n    assetInIndex: 2,\n    assetOutIndex: 3,\n    amount: 0,\n    userData: 0x0..0]],\nassets: [\n  0: 0xba10..4e3D,\n  1: 0xC02a..6Cc2,\n  2: 0xA0b8..eB48,\n  3: 0xdAC1..1ec7],\nfunds: [\n  sender: 0x3ef6..92Eb,\n  fromInternalBalance: false,\n  recipient: 0x3ef6..92Eb,\n  toInternalBalance: false],\nlimits: [\n  0: 1,766,,929,110,350,000,000,000,\n  1: 0,\n  2: 0,\n  3: 0],\ndeadline: 1,640,567,950)\n182,781 gas
+activate ba12f2c8
+ba12f2c8 -> 5c6e8f56: onSwap(\nrequest: [\n  kind: ,\n  tokenIn: 0xba10..4e3D,\n  tokenOut: 0xC02a..6Cc2,\n  amount: 1,766,,929,110,350,000,000,000,\n  poolId: 0x5c6ee304399dbdb9c8ef030ab642b10820db8f5600020..014,\n  lastChangeBlock: 13,884,065,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalanceTokenIn: 5,312,741,,360,159,618,448,951,703,\nbalanceTokenOut: 5,912,,177,037,115,528,953,546)\n26,030 gas
+activate 5c6e8f56
+return\n7,,854,704,388,137,400,345
+ba12f2c8 -> 9664b6f8: onSwap(\nrequest: [\n  kind: ,\n  tokenIn: 0xC02a..6Cc2,\n  tokenOut: 0xA0b8..eB48,\n  amount: 7,,854,704,388,137,400,345,\n  poolId: 0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f800020..019,\n  lastChangeBlock: 13,884,150,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalanceTokenIn: 734,,355,750,331,675,611,512,\nbalanceTokenOut: 2,981,172,049,916)\n25,962 gas
+activate 9664b6f8
+return\n31,533,698,784
+ba12f2c8 -> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0xA0b8..eB48,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 31,533,698,784,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,267,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,935,304,757,382,\n  2: 31,408,332,687,508],\nindexIn: 1,\nindexOut: 2)\n29,581 gas
+activate 06df1b42
+return\n31,515,167,957
+ba12f2c8 -> ba104e3d: transferFrom(\nsender: 0x3ef6..92Eb,\nrecipient: 0xBA12..F2C8,\namount: 1,766,,929,110,350,000,000,000)\n26,309 gas
+activate ba104e3d
+return\ntrue
+ba12f2c8 -> dac11ec7: transfer(\n_to: 0x3ef6..92Eb,\n_value: 31,515,167,957)\n4,901 gas
+activate dac11ec7
+return
+return\nassetDeltas: [\n  0: 1,766,,929,110,350,000,000,000,\n  1: 0,\n  2: 0,\n  3: -31515167957]
+note right of ba12f2c8: \n69,998 gas
+3ef692eb -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x3ef6..92Eb)\n1,031 gas
+activate dac11ec7
+return\n35,836,191,818
+3ef692eb -[#3471CD]> 7da987a7: strategies(\narg0: 0x3ef6..92Eb)\n3,942 gas
+activate 7da987a7
+7da987a7 ->> a6966c7e: strategies(\narg0: 0x3ef6..92Eb)\n3,725 gas
+activate a6966c7e #809ECB
+return\nperformanceFee: 1,000,\nactivation: 1,634,256,439,\ndebtRatio: 1,800,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,727,090,\ntotalDebt: 10,212,108,430,881,\ntotalGain: 325,435,234,744,\ntotalLoss: 0
+return\nperformanceFee: 1,000,\nactivation: 1,634,256,439,\ndebtRatio: 1,800,\nminDebtPerHarvest: 0,\nmaxDebtPerHarvest: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,,584,007,913,129,639,935,\nlastReport: 1,639,727,090,\ntotalDebt: 10,212,108,430,881,\ntotalGain: 325,435,234,744,\ntotalLoss: 0
+note right of 7da987a7: \n217 gas
+3ef692eb -[#3471CD]> 7da987a7: report(\ngain: 35,836,191,818,\nloss: 0,\n_debtPayment: 0)\n105,816 gas
+activate 7da987a7
+7da987a7 ->> a6966c7e: report(\ngain: 35,836,191,818,\nloss: 0,\n_debtPayment: 0)\n105,632 gas
+activate a6966c7e #809ECB
+7da987a7 -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x3ef6..92Eb)\n1,031 gas
+activate dac11ec7
+return\n35,836,191,818
+7da987a7 -[#3471CD]> 3ef692eb: delegatedAssets()\n484 gas
+activate 3ef692eb
+3ef692eb ->> 9cffa7ec: delegatedAssets()\n318 gas
+activate 9cffa7ec #809ECB
+return\n0
+return\n0
+note right of 3ef692eb: \n166 gas
+7da987a7 -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x7Da9..87a7)\n1,031 gas
+activate dac11ec7
+return\n15,905,406,486,034
+7da987a7 -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x7Da9..87a7)\n1,031 gas
+activate dac11ec7
+return\n15,905,406,486,034
+7da987a7 -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x7Da9..87a7)\n1,031 gas
+activate dac11ec7
+return\n15,905,406,486,034
+7da987a7 -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x7Da9..87a7)\n1,031 gas
+activate dac11ec7
+return\n15,905,406,486,034
+7da987a7 -[#3471CD]> dac11ec7: transfer(\n_to: 0x3ef6..92Eb,\n_value: 4,540,595,089,819)\n9,701 gas
+activate dac11ec7
+return
+return\n0
+note right of a6966c7e: \n90,292 gas
+return\n0
+note right of 7da987a7: \n184 gas
+3ef692eb -[#3471CD]> ba12f2c8: getPoolTokens(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063)\n5,557 gas
+activate ba12f2c8
+return\ntokens: [\n  0: 0x6B17..1d0F,\n  1: 0xA0b8..eB48,\n  2: 0xdAC1..1ec7],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 31,376,817,519,551],\nlastChangeBlock: 13,884,267
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n144,029,193,,173,694,623,845,506,173
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n10,169,164,,771,285,845,975,540,319
+3ef692eb -[#3471CD]> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0x6B17..1d0F,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 3,980,213,,782,564,776,675,983,777,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,267,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 31,376,817,519,551],\nindexIn: 0,\nindexOut: 2)\n30,518 gas
+activate 06df1b42
+return\n3,977,436,517,178
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n144,029,193,,173,694,623,845,506,173
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n10,169,164,,771,285,845,975,540,319
+3ef692eb -[#3471CD]> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0xA0b8..eB48,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 4,022,137,137,582,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,267,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 31,376,817,519,551],\nindexIn: 1,\nindexOut: 2)\n30,518 gas
+activate 06df1b42
+return\n4,019,299,766,634
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n144,029,193,,173,694,623,845,506,173
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n10,169,164,,771,285,845,975,540,319
+3ef692eb -[#3471CD]> dac11ec7: balanceOf(\nwho: 0x3ef6..92Eb)\n1,031 gas
+activate dac11ec7
+return\n4,576,431,281,637
+3ef692eb -[#3471CD]> ba12f2c8: joinPool(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\nsender: 0x3ef6..92Eb,\nrecipient: 0x3ef6..92Eb,\nrequest: [\n  assets: [\n    0: 0x6B17..1d0F,\n    1: 0xA0b8..eB48,\n    2: 0xdAC1..1ec7],\n  maxAmountsIn: [\n    0: 0,\n    1: 0,\n    2: 4,576,431,281,637],\n  userData: 0x0..010..060..030..0429888f95e5,\n  fromInternalBalance: false])\n99,810 gas
+activate ba12f2c8
+ba12f2c8 -> ce889f9f: getSwapFeePercentage()\n351 gas
+activate ce889f9f
+return\n0
+ba12f2c8 -> 06df1b42: onJoinPool(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\nsender: 0x3ef6..92Eb,\nrecipient: 0x3ef6..92Eb,\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 31,376,817,519,551],\nlastChangeBlock: 13,884,267,\nprotocolSwapFeePercentage: 0,\nuserData: 0x0..010..060..030..0429888f95e5)\n58,632 gas
+activate 06df1b42
+return\n[\n  0: 0,\n  1: 0,\n  2: 4,576,431,281,637],\n[\n  0: 0,\n  1: 0,\n  2: 0]
+ba12f2c8 -> dac11ec7: transferFrom(\n_from: 0x3ef6..92Eb,\n_to: 0xBA12..F2C8,\n_value: 4,576,431,281,637)\n8,930 gas
+activate dac11ec7
+return
+return
+note right of ba12f2c8: \n31,897 gas
+3ef692eb -[#3471CD]> ba12f2c8: getPoolTokens(\npoolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063)\n5,557 gas
+activate ba12f2c8
+return\ntokens: [\n  0: 0x6B17..1d0F,\n  1: 0xA0b8..eB48,\n  2: 0xdAC1..1ec7],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 35,953,248,801,188],\nlastChangeBlock: 13,884,267
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n148,584,992,,466,857,939,597,095,327
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n14,724,964,,064,449,161,727,129,473
+3ef692eb -[#3471CD]> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0x6B17..1d0F,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 5,586,643,,257,678,843,594,459,438,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,267,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 35,953,248,801,188],\nindexIn: 0,\nindexOut: 2)\n29,581 gas
+activate 06df1b42
+return\n5,583,480,605,316
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n148,584,992,,466,857,939,597,095,327
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n14,724,964,,064,449,161,727,129,473
+3ef692eb -[#3471CD]> 06df1b42: onSwap(\nswapRequest: [\n  kind: ,\n  tokenIn: 0xA0b8..eB48,\n  tokenOut: 0xdAC1..1ec7,\n  amount: 5,645,487,038,803,\n  poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,\n  lastChangeBlock: 13,884,267,\n  from: 0x3ef6..92Eb,\n  to: 0x3ef6..92Eb,\n  userData: 0x0..0],\nbalances: [\n  0: 56,373,064,,322,876,234,875,483,112,\n  1: 56,966,838,456,166,\n  2: 35,953,248,801,188],\nindexIn: 1,\nindexOut: 2)\n30,518 gas
+activate 06df1b42
+return\n5,642,247,986,003
+3ef692eb -[#3471CD]> 06df1b42: totalSupply()\n374 gas
+activate 06df1b42
+return\n148,584,992,,466,857,939,597,095,327
+3ef692eb -[#3471CD]> 06df1b42: balanceOf(\naccount: 0x3ef6..92Eb)\n644 gas
+activate 06df1b42
+return\n14,724,964,,064,449,161,727,129,473
+3ef692eb -[#3471CD]> ddcef012: check(\nprofit: 35,836,191,818,\nloss: 0,\ndebtPayment: 0,\ndebtOutstanding: 0,\ntotalDebt: 10,212,108,430,881)\n13,720 gas
+activate ddcef012
+return\ntrue
+return
+note right of 9cffa7ec: \n159,393 gas
+return
+note right of 3ef692eb: \n2,663 gas
+return
+note right of 40a2130d: \n6,307 gas
+return\nsuccess: true
+note right of d9db9552: \n31,828 gas
+return\nsuccess: true
+note right of 16380ff7: \n5,006 gas
+
+note over 16380ff7 #aqua
+ExecutionSuccess:
+txHash: 0xc715347ca3aa1621e41dd6c667cebb40aa51fa1843e04a4adb3293bf5df08260,
+payment: 0
+end note
+note over 7da987a7 #aqua
+StrategyUpdateDebtRatio:
+strategy: 0x3ef6..92Eb,
+debtRatio: 1,800
+StrategyUpdateDebtRatio:
+strategy: 0x3ef6..92Eb,
+debtRatio: 1,800
+Transfer:
+sender: 0x0000..0000,
+receiver: 0x7Da9..87a7,
+value: 12,154,721,039
+Transfer:
+sender: 0x0000..0000,
+receiver: 0x7Da9..87a7,
+value: 12,154,721,039
+Transfer:
+sender: 0x7Da9..87a7,
+receiver: 0x3ef6..92Eb,
+value: 3,454,407,155
+Transfer:
+sender: 0x7Da9..87a7,
+receiver: 0x3ef6..92Eb,
+value: 3,454,407,155
+Transfer:
+sender: 0x7Da9..87a7,
+receiver: 0x93A6..Efde,
+value: 8,700,313,884
+Transfer:
+sender: 0x7Da9..87a7,
+receiver: 0x93A6..Efde,
+value: 8,700,313,884
+StrategyReported:
+strategy: 0x3ef6..92Eb,
+gain: 35,836,191,818,
+loss: 0,
+debtPaid: 0,
+totalGain: 361,271,426,562,
+totalLoss: 0,
+totalDebt: 14,788,539,712,518,
+debtAdded: 4,576,431,281,637,
+debtRatio: 1,800
+StrategyReported:
+strategy: 0x3ef6..92Eb,
+gain: 35,836,191,818,
+loss: 0,
+debtPaid: 0,
+totalGain: 361,271,426,562,
+totalLoss: 0,
+totalDebt: 14,788,539,712,518,
+debtAdded: 4,576,431,281,637,
+debtRatio: 1,800
+end note
+note over 3ef692eb #aqua
+Harvested:
+profit: 35,836,191,818,
+loss: 0,
+debtPayment: 0,
+debtOutstanding: 0
+Harvested:
+profit: 35,836,191,818,
+loss: 0,
+debtPayment: 0,
+debtOutstanding: 0
+end note
+note over dac11ec7 #aqua
+Transfer:
+from: 0xBA12..F2C8,
+to: 0x3ef6..92Eb,
+value: 4,321,023,861
+Transfer:
+from: 0xBA12..F2C8,
+to: 0x3ef6..92Eb,
+value: 31,515,167,957
+Transfer:
+from: 0x7Da9..87a7,
+to: 0x3ef6..92Eb,
+value: 4,540,595,089,819
+Transfer:
+from: 0x3ef6..92Eb,
+to: 0xBA12..F2C8,
+value: 4,576,431,281,637
+end note
+note over ba12f2c8 #aqua
+Swap:
+poolId: 0x5c6ee304399dbdb9c8ef030ab642b10820db8f5600020..014,
+tokenIn: 0xba10..4e3D,
+tokenOut: 0xC02a..6Cc2,
+amountIn: 1,766,,929,110,350,000,000,000,
+amountOut: 7,,854,704,388,137,400,345
+Swap:
+poolId: 0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f800020..019,
+tokenIn: 0xC02a..6Cc2,
+tokenOut: 0xA0b8..eB48,
+amountIn: 7,,854,704,388,137,400,345,
+amountOut: 31,533,698,784
+Swap:
+poolId: 0x06df3b2bbb68adc8b0e302443692037ed9f91b420..063,
+tokenIn: 0xA0b8..eB48,
+tokenOut: 0xdAC1..1ec7,
+amountIn: 31,533,698,784,
+amountOut: 31,515,167,957
+end note
+note over 06df1b42 #aqua
+Transfer:
+from: 0x3ef6..92Eb,
+to: 0x0000..0000,
+value: 4,302,,462,498,190,216,114,507
+Transfer:
+from: 0x0000..0000,
+to: 0x3ef6..92Eb,
+value: 4,555,799,,293,163,315,751,589,154
+end note
+note over ba104e3d #aqua
+Transfer:
+from: 0x3ef6..92Eb,
+to: 0xBA12..F2C8,
+value: 1,766,,929,110,350,000,000,000
+Approval:
+owner: 0x3ef6..92Eb,
+spender: 0xBA12..F2C8,
+value: 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,022,776,,018,112,656,023,639,935
+end note
+@endumls

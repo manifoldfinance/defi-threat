@@ -1,0 +1,171 @@
+@startuml
+title 0x8fe3efab0f7fbdb70cea073e703062a7281031953bc0786b07b3b1e31db04e35
+caption  Mon, 13 Dec 2021 10:37:25 GMT
+participant "0xd356..3643" as d3563643 
+participant "0x5136..1ba4" as 51361ba4 
+participant "0x7be8..d12b" as 7be8d12b <<WyvernExchange>>
+participant "0xa540..77c1" as a54077c1 <<WyvernProxyRegistry>>
+participant "0x3f66..c433" as 3f66c433 <<OwnableDelegateProxy>>
+participant "0x5b32..1073" as 5b321073 
+participant "0x18a4..3a4a" as 18a43a4a 
+participant "0xf9e2..79f2" as f9e279f2 <<AuthenticatedProxy>>
+participant "0x49cf..a28b" as 49cfa28b <<CloneX>>
+participant "0x19a0..fcb5" as 19a0fcb5 <<OwnableDelegateProxy>>
+participant "0xe5c7..e4e1" as e5c7e4e1 <<WyvernTokenTransferProxy>>
+participant "0xc02a..6cc2" as c02a6cc2 <<WETH9>>
+
+note over d3563643
+Nonce: 188
+Gas Price: 83.418836802 Gwei
+Gas Limit: 620,599
+Gas Used: 443,461
+Tx Fee: 0.037 ETH
+end note
+
+d3563643 -> 51361ba4: 0x989cbe02\n464,965 gas\n7.8 ETH
+activate 51361ba4
+51361ba4 -> 7be8d12b: atomicMatch_(\naddrs: [\n  0: 0x7Be8076f4EA4A4AD08075C2508e481d6C946D12b,\n  1: 0x51364292c0e7FD6Ec3d1356eeE3BCBaf64b31Ba4,\n  2: 0x18A4489a739ac9835DA14e006B35D65040e53a4A,\n  3: 0x0000000000000000000000000000000000000000,\n  4: 0x49cF6f5d44E70224e2E23fDcdd2C053F30aDA28B,\n  5: 0x0000000000000000000000000000000000000000,\n  6: 0x0000000000000000000000000000000000000000,\n  7: 0x7Be8076f4EA4A4AD08075C2508e481d6C946D12b,\n  8: 0x18A4489a739ac9835DA14e006B35D65040e53a4A,\n  9: 0x0000000000000000000000000000000000000000,\n  10: 0x5b3256965e7C3cF26E11FCAf296DfC8807C01073,\n  11: 0x49cF6f5d44E70224e2E23fDcdd2C053F30aDA28B,\n  12: 0x0000000000000000000000000000000000000000,\n  13: 0x0000000000000000000000000000000000000000],\nuints: [\n  0: 750,\n  1: 0,\n  2: 0,\n  3: 0,\n  4: 7,,800,000,000,000,000,000,\n  5: 0,\n  6: 1,639,391,750,\n  7: 0,\n  8: 11,946,584,456,896,813,640,739,512,220,168,639,871,970,498,830,361,165,550,256,,833,972,360,165,883,155,\n  9: 750,\n  10: 0,\n  11: 0,\n  12: 0,\n  13: 7,,800,000,000,000,000,000,\n  14: 0,\n  15: 1,639,391,743,\n  16: 1,655,079,583,\n  17: 40,565,826,774,256,662,338,531,173,767,117,216,249,823,039,562,751,429,084,993,,957,661,185,049,046,792],\nfeeMethodsSidesKindsHowToCalls: [\n  0: 1,\n  1: ,\n  2: ,\n  3: ,\n  4: 1,\n  5: 1,\n  6: ,\n  7: ],\ncalldataBuy: 0x23b872dd0..051364292c0e7fd6ec3d1356eee3bcbaf64b31ba40..02809,\ncalldataSell: 0x23b872dd0..018a4489a739ac9835da14e006b35d65040e53a4a0..02809,\nreplacementPatternBuy: 0x0..0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\nffff0..0,\nreplacementPatternSell: 0x0..0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\nffff0..0,\nstaticExtradataBuy: 0x,\nstaticExtradataSell: 0x,\nvs: [\n  0: 27,\n  1: 27],\nrssMetadata: [\n  0: 0xac6712d5a34c43321aa65abde884c879b9f961c8f87b30554d9edaabeeafa390,\n  1: 0x703a5428605e44cd4c924ed83f0d58775ccbe2737b2ad4a3c31cf8c470457af6,\n  2: 0xac6712d5a34c43321aa65abde884c879b9f961c8f87b30554d9edaabeeafa390,\n  3: 0x703a5428605e44cd4c924ed83f0d58775ccbe2737b2ad4a3c31cf8c470457af6,\n  4: 0x0..0])\n203,180 gas\n7.8 ETH
+activate 7be8d12b
+7be8d12b -> a54077c1: proxies(\n0x18A4..3a4A)\n2,782 gas
+activate a54077c1
+return\n0x3F66..C433
+7be8d12b -> a54077c1: delegateProxyImplementation()\n2,613 gas
+activate a54077c1
+return\n0xF9e2..79f2
+7be8d12b -> 3f66c433: implementation()\n2,525 gas
+activate 3f66c433
+return\n0xF9e2..79f2
+7be8d12b -> 5b321073: fallback()\n0.585 ETH
+activate 5b321073
+return
+7be8d12b -> 18a43a4a: fallback()\n7.215 ETH
+activate 18a43a4a
+return
+7be8d12b --> 3f66c433: proxy(\ndest: 0x49cF..A28B,\nhowToCall: ,\ncalldata: 0x23b872dd0..018a4489a739ac9835da14e006b35d65040e53a4a0..051364292\nc0e7fd6ec3d1356eee3bcbaf64b31ba40..02809)\n99,458 gas
+activate 3f66c433
+3f66c433 ->> f9e279f2: proxy(\ndest: 0x49cF..A28B,\nhowToCall: ,\ncalldata: 0x23b872dd0..018a4489a739ac9835da14e006b35d65040e53a4a0..051364292\nc0e7fd6ec3d1356eee3bcbaf64b31ba40..02809)\n96,198 gas
+activate f9e279f2 #809ECB
+3f66c433 -[#3471CD]> a54077c1: contracts(\n0x7Be8..D12b)\n2,553 gas
+activate a54077c1
+return\ntrue
+3f66c433 -[#3471CD]> 49cfa28b: transferFrom(\nfrom: 0x18A4..3a4A,\nto: 0x5136..1Ba4,\ntokenId: 10,249)\n87,301 gas
+activate 49cfa28b
+return
+return
+note right of f9e279f2: \n6,344 gas
+return\nresult: true
+note right of 3f66c433: \n3,260 gas
+return
+51361ba4 -> 49cfa28b: isApprovedForAll(\nowner: 0x5136..1Ba4,\noperator: 0x19a0..Fcb5)\n2,793 gas
+activate 49cfa28b
+return\ntrue
+51361ba4 -> 7be8d12b: atomicMatch_(\naddrs: [\n  0: 0x7Be8076f4EA4A4AD08075C2508e481d6C946D12b,\n  1: 0x534c8bC9781a8072b524B853147A69BC6Bf2B552,\n  2: 0x0000000000000000000000000000000000000000,\n  3: 0x5b3256965e7C3cF26E11FCAf296DfC8807C01073,\n  4: 0x49cF6f5d44E70224e2E23fDcdd2C053F30aDA28B,\n  5: 0x0000000000000000000000000000000000000000,\n  6: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,\n  7: 0x7Be8076f4EA4A4AD08075C2508e481d6C946D12b,\n  8: 0x51364292c0e7FD6Ec3d1356eeE3BCBaf64b31Ba4,\n  9: 0x534c8bC9781a8072b524B853147A69BC6Bf2B552,\n  10: 0x0000000000000000000000000000000000000000,\n  11: 0x49cF6f5d44E70224e2E23fDcdd2C053F30aDA28B,\n  12: 0x0000000000000000000000000000000000000000,\n  13: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2],\nuints: [\n  0: 0,\n  1: 750,\n  2: 0,\n  3: 0,\n  4: 11,,000,000,000,000,000,000,\n  5: 0,\n  6: 1,639,382,478,\n  7: 1,639,987,368,\n  8: 55,391,211,411,100,045,256,953,056,810,018,015,680,268,353,064,562,698,764,367,,883,408,249,859,758,832,\n  9: 0,\n  10: 750,\n  11: 0,\n  12: 0,\n  13: 11,,000,000,000,000,000,000,\n  14: 0,\n  15: 1,639,391,750,\n  16: 0,\n  17: 58,167,978,188,978,779,436,101,937,507,175,013,978,570,661,886,722,018,950,944,,835,578,948,022,439,132],\nfeeMethodsSidesKindsHowToCalls: [\n  0: 1,\n  1: ,\n  2: ,\n  3: ,\n  4: 1,\n  5: 1,\n  6: ,\n  7: ],\ncalldataBuy: 0x23b872dd0..0534c8bc9781a8072b524b853147a69bc6bf2b5520..02809,\ncalldataSell: 0x23b872dd0..051364292c0e7fd6ec3d1356eee3bcbaf64b31ba40..02809,\nreplacementPatternBuy: 0x0..0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\nffff0..0,\nreplacementPatternSell: 0x0..0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\nffff0..0,\nstaticExtradataBuy: 0x,\nstaticExtradataSell: 0x,\nvs: [\n  0: 28,\n  1: 28],\nrssMetadata: [\n  0: 0xda02bd80e1de3e57f9e6cf349396678a26fcd5a7d2e43b1ee27f9754cb9701ea,\n  1: 0x1552376a7919d1036cd89525a92836e35aa97c2313fd3569f0049779be329119,\n  2: 0xda02bd80e1de3e57f9e6cf349396678a26fcd5a7d2e43b1ee27f9754cb9701ea,\n  3: 0x1552376a7919d1036cd89525a92836e35aa97c2313fd3569f0049779be329119,\n  4: 0x0..0])\n187,339 gas
+activate 7be8d12b
+7be8d12b -> a54077c1: proxies(\n0x5136..1Ba4)\n2,782 gas
+activate a54077c1
+return\n0x19a0..Fcb5
+7be8d12b -> a54077c1: delegateProxyImplementation()\n613 gas
+activate a54077c1
+return\n0xF9e2..79f2
+7be8d12b -> 19a0fcb5: implementation()\n2,525 gas
+activate 19a0fcb5
+return\n0xF9e2..79f2
+7be8d12b -> e5c7e4e1: transferFrom(\ntoken: 0xC02a..6Cc2,\nfrom: 0x534c..B552,\nto: 0x5136..1Ba4,\namount: 11,,000,000,000,000,000,000)\n38,433 gas
+activate e5c7e4e1
+e5c7e4e1 -> a54077c1: contracts(\n0x7Be8..D12b)\n553 gas
+activate a54077c1
+return\ntrue
+e5c7e4e1 -> c02a6cc2: transferFrom(\nsrc: 0x534c..B552,\ndst: 0x5136..1Ba4,\nwad: 11,,000,000,000,000,000,000)\n32,125 gas
+activate c02a6cc2
+return\ntrue
+return\ntrue
+note right of e5c7e4e1: \n5,755 gas
+7be8d12b -> e5c7e4e1: transferFrom(\ntoken: 0xC02a..6Cc2,\nfrom: 0x5136..1Ba4,\nto: 0x5b32..1073,\namount: 825,000,000,000,000,000)\n12,033 gas
+activate e5c7e4e1
+e5c7e4e1 -> a54077c1: contracts(\n0x7Be8..D12b)\n553 gas
+activate a54077c1
+return\ntrue
+e5c7e4e1 -> c02a6cc2: transferFrom(\nsrc: 0x5136..1Ba4,\ndst: 0x5b32..1073,\nwad: 825,000,000,000,000,000)\n10,225 gas
+activate c02a6cc2
+return\ntrue
+return\ntrue
+note right of e5c7e4e1: \n1,255 gas
+7be8d12b --> 19a0fcb5: proxy(\ndest: 0x49cF..A28B,\nhowToCall: ,\ncalldata: 0x23b872dd0..051364292c0e7fd6ec3d1356eee3bcbaf64b31ba40..0534c8bc9\n781a8072b524b853147a69bc6bf2b5520..02809)\n61,364 gas
+activate 19a0fcb5
+19a0fcb5 ->> f9e279f2: proxy(\ndest: 0x49cF..A28B,\nhowToCall: ,\ncalldata: 0x23b872dd0..051364292c0e7fd6ec3d1356eee3bcbaf64b31ba40..0534c8bc9\n781a8072b524b853147a69bc6bf2b5520..02809)\n60,604 gas
+activate f9e279f2 #809ECB
+19a0fcb5 -[#3471CD]> a54077c1: contracts(\n0x7Be8..D12b)\n553 gas
+activate a54077c1
+return\ntrue
+19a0fcb5 -[#3471CD]> 49cfa28b: transferFrom(\nfrom: 0x5136..1Ba4,\nto: 0x534c..B552,\ntokenId: 10,249)\n53,707 gas
+activate 49cfa28b
+return
+return
+note right of f9e279f2: \n6,344 gas
+return\nresult: true
+note right of 19a0fcb5: \n760 gas
+return
+note right of 7be8d12b: \n69,589 gas
+51361ba4 -> c02a6cc2: balanceOf(\n0x5136..1Ba4)\n534 gas
+activate c02a6cc2
+return\n10,,175,000,000,000,000,000
+51361ba4 -> c02a6cc2: withdraw(\nwad: 10,,175,000,000,000,000,000)\n9,195 gas
+activate c02a6cc2
+c02a6cc2 -> 51361ba4: fallback()\n55 gas\n10.175 ETH
+activate 51361ba4
+51361ba4 -> d3563643: fallback()\n10.175 ETH
+activate d3563643
+return
+return
+return
+note right of c02a6cc2: \n9,140 gas
+return
+
+note over 7be8d12b #aqua
+OrdersMatched:
+buyHash: 0x0..0,
+sellHash: 0x9380ce315bf647b213578a1aafc387810be05588fa548be3f4a8df4dd1065ed2,
+maker: 0x18A4..3a4A,
+taker: 0x5136..1Ba4,
+price: 7,,800,000,000,000,000,000,
+metadata: 0x0..0
+OrdersMatched:
+buyHash: 0xc75448cac10757462b8961353c5ad8e4a7f093e734be816649be1772d6f294f6,
+sellHash: 0x0..0,
+maker: 0x534c..B552,
+taker: 0x5136..1Ba4,
+price: 11,,000,000,000,000,000,000,
+metadata: 0x0..0
+end note
+note over 49cfa28b #aqua
+Approval:
+owner: 0x18A4..3a4A,
+approved: 0x0000..0000,
+tokenId: 10,249
+Transfer:
+from: 0x18A4..3a4A,
+to: 0x5136..1Ba4,
+tokenId: 10,249
+Approval:
+owner: 0x5136..1Ba4,
+approved: 0x0000..0000,
+tokenId: 10,249
+Transfer:
+from: 0x5136..1Ba4,
+to: 0x534c..B552,
+tokenId: 10,249
+end note
+note over c02a6cc2 #aqua
+Transfer:
+src: 0x534c..B552,
+dst: 0x5136..1Ba4,
+wad: 11,,000,000,000,000,000,000
+Transfer:
+src: 0x5136..1Ba4,
+dst: 0x5b32..1073,
+wad: 825,000,000,000,000,000
+Withdrawal:
+src: 0x5136..1Ba4,
+wad: 10,,175,000,000,000,000,000
+end note
+@endumls

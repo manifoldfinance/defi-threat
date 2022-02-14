@@ -1,0 +1,82 @@
+@startuml
+title 0x346a9f45c70d4f323c67fd0f348b2a8aaa7477a719557c27a8130c8873279d3b
+caption  Mon, 03 May 2021 13:59:15 GMT
+participant "0x0778..9995" as 07789995 
+participant "0x4572..6bea" as 45726bea <<Swap>>
+participant "0xa42d..0fd7" as a42d0fd7 <<Types>>
+participant "0xb8bc..dcc0" as b8bcdcc0 <<TransferHandlerRegistry>>
+participant "0xbf78..7c52" as bf787c52 <<ERC20TransferHandler>>
+participant "0xfc82..b27d" as fc82b27d <<Token Prometeus Network (PROM)>><<PROMToken>>
+participant "0xa0b8..eb48" as a0b8eb48 <<USD Coin (USDC)>><<FiatTokenProxy>>
+participant "0xa232..bdcf" as a232bdcf <<FiatTokenV2_1>>
+
+note over 07789995
+Nonce: 2
+Gas Price: 50.0 Gwei
+Gas Limit: 400,000
+Gas Used: 158,215
+Tx Fee: 0.008 ETH
+end note
+
+07789995 -> 45726bea: swap(\norder: [\n  nonce: 1,620,050,110,114,\n  expiry: 1,620,053,710,\n  signer: [\n    kind: 0x36372b07,\n    wallet: 0xe5D0..6590,\n    token: 0xA0b8..eB48,\n    amount: 30,725,281,750,000,\n    id: 0],\n  sender: [\n    kind: 0x36372b07,\n    wallet: 0x0778..9995,\n    token: 0xfc82..b27d,\n    amount: 999,990,,000,000,000,000,000,000,\n    id: 0],\n  affiliate: [\n    kind: 0x36372b07,\n    wallet: 0xFf98..ef25,\n    token: 0x0000..0000,\n    amount: 0,\n    id: 0],\n  signature: [\n    signatory: 0xe5D0..6590,\n    validator: 0x4572..6BeA,\n    version: 0x01,\n    v: 28,\n    r: 0xa83c4b214de8ac24d686992708e70f538716bc655d94f40139bf1f7bcaffdc71,\n    s: 0x6dfbd1d3cbb818037d589822581a7ee361645cf812e95ccb8ca91a8ef52ea961]])\n146,303 gas
+activate 45726bea
+45726bea ->> a42d0fd7: 0x8663ca4c\n10,828 gas
+activate a42d0fd7 #809ECB
+return
+45726bea -> b8bcdcc0: transferHandlers(\n0x36372b07)\n2,791 gas
+activate b8bcdcc0
+return\n0xBf78..7c52
+45726bea ->> bf787c52: transferTokens(\nfrom: 0x0778..9995,\nto: 0xe5D0..6590,\namount: 999,990,,000,000,000,000,000,000,\nid: 0,\ntoken: 0xfc82..b27d)\n24,597 gas
+activate bf787c52 #809ECB
+45726bea -[#3471CD]> fc82b27d: transferFrom(\n_from: 0x0778..9995,\n_to: 0xe5D0..6590,\n_value: 999,990,,000,000,000,000,000,000)\n18,888 gas
+activate fc82b27d
+return\ntrue
+return\ntrue
+note right of bf787c52: \n5,709 gas
+45726bea -> b8bcdcc0: transferHandlers(\n0x36372b07)\n791 gas
+activate b8bcdcc0
+return\n0xBf78..7c52
+45726bea ->> bf787c52: transferTokens(\nfrom: 0xe5D0..6590,\nto: 0x0778..9995,\namount: 30,725,281,750,000,\nid: 0,\ntoken: 0xA0b8..eB48)\n40,601 gas
+activate bf787c52 #809ECB
+45726bea --[#3471CD]> a0b8eb48: transferFrom(\n_from: 0xe5D0..6590,\n_to: 0x0778..9995,\n_value: 30,725,281,750,000)\n34,892 gas
+activate a0b8eb48
+a0b8eb48 ->> a232bdcf: transferFrom(\nfrom: 0xe5D0..6590,\nto: 0x0778..9995,\nvalue: 30,725,281,750,000)\n27,597 gas
+activate a232bdcf #809ECB
+return\ntrue
+return\ntrue
+note right of a0b8eb48: \n7,295 gas
+return\ntrue
+note right of bf787c52: \n5,709 gas
+return
+note right of 45726bea: \n66,695 gas
+
+note over 45726bea #aqua
+Swap:
+nonce: 1,620,050,110,114,
+timestamp: 1,620,050,355,
+signerWallet: 0xe5D0..6590,
+signerAmount: 30,725,281,750,000,
+signerId: 0,
+signerToken: 0xA0b8..eB48,
+senderWallet: 0x0778..9995,
+senderAmount: 999,990,,000,000,000,000,000,000,
+senderId: 0,
+senderToken: 0xfc82..b27d,
+affiliateWallet: 0xFf98..ef25,
+affiliateAmount: 0,
+affiliateId: 0,
+affiliateToken: 0x0000..0000
+end note
+note over fc82b27d #aqua
+Transfer:
+from: 0x0778..9995,
+to: 0xe5D0..6590,
+value: 999,990,,000,000,000,000,000,000
+end note
+note over a0b8eb48 #aqua
+Transfer:
+from: 0xe5D0..6590,
+to: 0x0778..9995,
+value: 30,725,281,750,000
+end note
+@endumls
