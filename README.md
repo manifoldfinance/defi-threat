@@ -1,6 +1,6 @@
 # DeFi Threat Matrix
 
-- v3 of the DeFi Matrix will be released in January
+- v3 of the DeFi Matrix will be released at ETH Denver 2022
 
 - v1 and v2 can be found below
 
@@ -47,6 +47,14 @@ blockchain/cryptocurrency applications (i.e. protocols).
 | Structuring                      |                                  |                            |                            |                                                         |
 |                                  |                                  |                            |                            |                                                         |
 | Back\-Running                    |                                  |                            |                            |                                                         |
+
+
+## UML Diagrams of Real World Attacks 
+
+### Example: Fake Trading Volume on UniswapV2
+
+![](https://d.pr/i/5vsXd4.jpeg)
+
 
 ## Contributions and Acknowledgements
 
