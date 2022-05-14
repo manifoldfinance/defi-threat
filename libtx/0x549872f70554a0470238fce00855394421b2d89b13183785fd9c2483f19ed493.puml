@@ -1,0 +1,199 @@
+@startuml
+title 0x549872f70554a0470238fce00855394421b2d89b13183785fd9c2483f19ed493
+caption  Fri, 30 Apr 2021 17:28:51 GMT
+participant "0xeeee..91f1" as eeee91f1 
+participant "0xa1da..30fd" as a1da30fd 
+participant "0xf243..f288" as f243f288 
+participant "0xc02a..6cc2" as c02a6cc2 <<Wrapped Ether (WETH)>><<WETH9>>
+participant "0xbb2b..d940" as bb2bd940 <<Uniswap V2 (UNI-V2)>><<UniswapV2Pair>>
+participant "0x2260..c599" as 2260c599 <<Wrapped BTC (WBTC)>><<WBTC>>
+participant "0x9a13..35e3" as 9a1335e3 <<SushiSwap LP Token (SLP)>><<UniswapV2Pair>>
+participant "0x798d..01c3" as 798d01c3 <<Digg (DIGG)>><<AdminUpgradeabilityProxy>>
+participant "0xfabe..48ae" as fabe48ae <<Digg (DIGG)>><<UFragments>>
+participant "0xf41e..8724" as f41e8724 <<SushiSwap LP Token (SLP)>><<UniswapV2Pair>>
+participant "0x829b..a830" as 829ba830 
+
+note over eeee91f1
+Nonce: 1,603
+Gas Price: 0.000000001 Gwei
+Gas Limit: 1,360,000
+Gas Used: 266,986
+Tx Fee: 0 ETH
+end note
+
+eeee91f1 -> a1da30fd: 0x00ffff00\n332,038 gas
+activate a1da30fd
+a1da30fd ->> f243f288: 0x09e4a8dc\n303,023 gas
+activate f243f288 #809ECB
+a1da30fd -[#3471CD]> c02a6cc2: deposit()\n23,974 gas\n0.039 ETH
+activate c02a6cc2
+return
+a1da30fd -[#3471CD]> bb2bd940: token0()\n2,381 gas
+activate bb2bd940
+return\n0x2260..C599
+a1da30fd -[#3471CD]> bb2bd940: getReserves()\n2,504 gas
+activate bb2bd940
+return\n_reserve0: 312,337,442,089,\n_reserve1: 64,049,,027,207,015,392,694,301,\n_blockTimestampLast: 1,619,803,667
+a1da30fd -[#3471CD]> c02a6cc2: transfer(\ndst: 0xBb2b..D940,\nwad: 38,667,034,149,995,424)\n8,062 gas
+activate c02a6cc2
+return
+a1da30fd -[#3471CD]> bb2bd940: swap(\namount0Out: 187,995,\namount1Out: 0,\nto: 0xA1dA..30FD,\ndata: 0x)\n65,955 gas
+activate bb2bd940
+bb2bd940 -> 2260c599: transfer(\n_to: 0xA1dA..30FD,\n_value: 187,995)\n32,803 gas
+activate 2260c599
+return
+bb2bd940 -> 2260c599: balanceOf(\n_owner: 0xBb2b..D940)\n795 gas
+activate 2260c599
+return\n312,337,254,094
+bb2bd940 -> c02a6cc2: balanceOf(\n0xBb2b..D940)\n534 gas
+activate c02a6cc2
+return\n64,049,,065,874,049,542,689,725
+return
+note right of bb2bd940: \n31,823 gas
+a1da30fd -[#3471CD]> 9a1335e3: token0()\n2,449 gas
+activate 9a1335e3
+return\n0x2260..C599
+a1da30fd -[#3471CD]> 9a1335e3: getReserves()\n2,517 gas
+activate 9a1335e3
+return\n_reserve0: 11,037,825,178,\n_reserve1: 120,598,927,435,\n_blockTimestampLast: 1,619,803,446
+a1da30fd -[#3471CD]> 2260c599: transfer(\n_to: 0x9a13..35E3,\n_value: 187,995)\n8,903 gas
+activate 2260c599
+return
+a1da30fd -[#3471CD]> 9a1335e3: swap(\namount0Out: 0,\namount1Out: 2,047,830,\nto: 0xA1dA..30FD,\ndata: 0x)\n74,695 gas
+activate 9a1335e3
+9a1335e3 --> 798d01c3: transfer(\ndst: 0xA1dA..30FD,\nwad: 2,047,830)\n39,969 gas
+activate 798d01c3
+798d01c3 ->> fabe48ae: transfer(\nto: 0xA1dA..30FD,\nvalue: 2,047,830)\n32,690 gas
+activate fabe48ae #809ECB
+return
+return
+note right of 798d01c3: \n7,279 gas
+9a1335e3 -> 2260c599: balanceOf(\n_owner: 0x9a13..35E3)\n795 gas
+activate 2260c599
+return\n11,038,013,173
+9a1335e3 --> 798d01c3: balanceOf(\n0x9a13..35E3)\n1,735 gas
+activate 798d01c3
+798d01c3 ->> fabe48ae: balanceOf(\nwho: 0x9a13..35E3)\n959 gas
+activate fabe48ae #809ECB
+return
+return\n120,596,879,605
+note right of 798d01c3: \n776 gas
+return
+note right of 9a1335e3: \n32,196 gas
+a1da30fd -[#3471CD]> f41e8724: token0()\n2,449 gas
+activate f41e8724
+return\n0x798D..01C3
+a1da30fd -[#3471CD]> f41e8724: getReserves()\n2,517 gas
+activate f41e8724
+return\n_reserve0: 2,621,\n_reserve1: 30,,198,540,237,458,443,543,\n_blockTimestampLast: 1,619,803,731
+a1da30fd --[#3471CD]> 798d01c3: transfer(\ndst: 0xf41E..8724,\nwad: 2,047,830)\n9,569 gas
+activate 798d01c3
+798d01c3 ->> fabe48ae: transfer(\nto: 0xf41E..8724,\nvalue: 2,047,830)\n8,790 gas
+activate fabe48ae #809ECB
+return
+return
+note right of 798d01c3: \n779 gas
+a1da30fd -[#3471CD]> f41e8724: swap(\namount0Out: 0,\namount1Out: 30,,159,822,787,380,505,620,\nto: 0xA1dA..30FD,\ndata: 0x)\n49,367 gas
+activate f41e8724
+f41e8724 -> c02a6cc2: transfer(\ndst: 0xA1dA..30FD,\nwad: 30,,159,822,787,380,505,620)\n27,962 gas
+activate c02a6cc2
+return
+f41e8724 --> 798d01c3: balanceOf(\n0xf41E..8724)\n1,735 gas
+activate 798d01c3
+798d01c3 ->> fabe48ae: balanceOf(\nwho: 0xf41E..8724)\n959 gas
+activate fabe48ae #809ECB
+return
+return\n2,050,451
+note right of 798d01c3: \n776 gas
+f41e8724 -> c02a6cc2: balanceOf(\n0xf41E..8724)\n534 gas
+activate c02a6cc2
+return\n38,717,450,077,937,923
+return
+note right of f41e8724: \n19,136 gas
+a1da30fd -[#3471CD]> c02a6cc2: withdraw(\nwad: 30,,159,822,787,380,505,620)\n9,207 gas
+activate c02a6cc2
+c02a6cc2 -> a1da30fd: fallback()\n67 gas\n30.16 ETH
+activate a1da30fd
+a1da30fd -> 829ba830: fallback()\n20.002 ETH
+activate 829ba830
+return
+return
+return
+note right of c02a6cc2: \n9,140 gas
+return
+note right of f243f288: \n38,474 gas
+return
+
+note over c02a6cc2 #aqua
+Deposit:
+dst: 0xA1dA..30FD,
+wad: 38,667,034,149,995,424
+Transfer:
+src: 0xA1dA..30FD,
+dst: 0xBb2b..D940,
+wad: 38,667,034,149,995,424
+Transfer:
+src: 0xf41E..8724,
+dst: 0xA1dA..30FD,
+wad: 30,,159,822,787,380,505,620
+Withdrawal:
+src: 0xA1dA..30FD,
+wad: 30,,159,822,787,380,505,620
+end note
+note over bb2bd940 #aqua
+Sync:
+reserve0: 312,337,254,094,
+reserve1: 64,049,,065,874,049,542,689,725
+Swap:
+sender: 0xA1dA..30FD,
+amount0In: 0,
+amount1In: 38,667,034,149,995,424,
+amount0Out: 187,995,
+amount1Out: 0,
+to: 0xA1dA..30FD
+end note
+note over 2260c599 #aqua
+Transfer:
+from: 0xBb2b..D940,
+to: 0xA1dA..30FD,
+value: 187,995
+Transfer:
+from: 0xA1dA..30FD,
+to: 0x9a13..35E3,
+value: 187,995
+end note
+note over 9a1335e3 #aqua
+Sync:
+reserve0: 11,038,013,173,
+reserve1: 120,596,879,605
+Swap:
+sender: 0xA1dA..30FD,
+amount0In: 187,995,
+amount1In: 0,
+amount0Out: 0,
+amount1Out: 2,047,830,
+to: 0xA1dA..30FD
+end note
+note over 798d01c3 #aqua
+Transfer:
+from: 0x9a13..35E3,
+to: 0xA1dA..30FD,
+value: 2,047,830
+Transfer:
+from: 0xA1dA..30FD,
+to: 0xf41E..8724,
+value: 2,047,830
+end note
+note over f41e8724 #aqua
+Sync:
+reserve0: 2,050,451,
+reserve1: 38,717,450,077,937,923
+Swap:
+sender: 0xA1dA..30FD,
+amount0In: 2,047,830,
+amount1In: 0,
+amount0Out: 0,
+amount1Out: 30,,159,822,787,380,505,620,
+to: 0xA1dA..30FD
+end note
+@endumls

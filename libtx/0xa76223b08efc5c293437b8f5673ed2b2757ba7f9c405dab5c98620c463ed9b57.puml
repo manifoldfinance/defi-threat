@@ -1,0 +1,77 @@
+@startuml
+title 0xa76223b08efc5c293437b8f5673ed2b2757ba7f9c405dab5c98620c463ed9b57
+caption  Thu, 01 Oct 2020 05:05:46 GMT
+participant "0x0000..ebbf" as 0000ebbf 
+participant "0xdef1..5eff" as def15eff <<ZeroEx>>
+participant "0xb255..8042" as b2558042 <<UniswapFeature>>
+participant "0xc02a..6cc2" as c02a6cc2 <<Wrapped Ether (WETH)>><<WETH9>>
+participant "0xd3d2..3a17" as d3d23a17 <<Uniswap V2 (UNI-V2)>><<UniswapV2Pair>>
+participant "0x1f98..f984" as 1f98f984 <<Uniswap (UNI)>><<Uni>>
+
+note over 0000ebbf
+Nonce: 14
+Gas Price: 75.0 Gwei
+Gas Limit: 150,783
+Gas Used: 109,885
+Tx Fee: 0.008 ETH
+end note
+
+0000ebbf --> def15eff: sellToUniswap(\ntokens: [\n  0: 0xEeee..EEeE,\n  1: 0x1f98..F984],\nsellAmount: 12,000,000,000,000,000,\nminBuyAmount: 1,,007,310,718,918,521,017,\nisSushi: false)\n110,009 gas\n0.012 ETH
+activate def15eff
+def15eff ->> b2558042: sellToUniswap(\ntokens: [\n  0: 0xEeee..EEeE,\n  1: 0x1f98..F984],\nsellAmount: 12,000,000,000,000,000,\nminBuyAmount: 1,,007,310,718,918,521,017,\nisSushi: false)\n107,455 gas\n0.012 ETH
+activate b2558042 #809ECB
+def15eff -[#3471CD]> c02a6cc2: deposit()\n22,674 gas\n0.012 ETH
+activate c02a6cc2
+return
+def15eff -[#3471CD]> c02a6cc2: transfer(\ndst: 0xd3d2..3a17,\nwad: 12,000,000,000,000,000)\n10,962 gas
+activate c02a6cc2
+return\ntrue
+def15eff -[#3471CD]> d3d23a17: getReserves()\n1,204 gas
+activate d3d23a17
+return\n_reserve0: 4,934,359,,823,247,108,870,429,160,\n_reserve1: 57,434,,090,761,458,552,907,834,\n_blockTimestampLast: 1,601,528,713
+def15eff -[#3471CD]> d3d23a17: swap(\namount0Out: 1,,027,868,080,529,103,079,\namount1Out: 0,\nto: 0x0000..ebBF,\ndata: 0x)\n60,616 gas
+activate d3d23a17
+d3d23a17 -> 1f98f984: transfer(\ndst: 0x0000..ebBF,\nrawAmount: 1,,027,868,080,529,103,079)\n18,862 gas
+activate 1f98f984
+return\ntrue
+d3d23a17 -> 1f98f984: balanceOf(\naccount: 0xd3d2..3a17)\n1,497 gas
+activate 1f98f984
+return\n4,934,358,,795,379,028,341,326,081
+d3d23a17 -> c02a6cc2: balanceOf(\n0xd3d2..3a17)\n1,234 gas
+activate c02a6cc2
+return\n57,434,,102,761,458,552,907,834
+return
+note right of d3d23a17: \n39,023 gas
+return\nbuyAmount: 1,,027,868,080,529,103,079
+note right of b2558042: \n11,999 gas
+return\nbuyAmount: 1,,027,868,080,529,103,079
+note right of def15eff: \n2,554 gas
+
+note over c02a6cc2 #aqua
+Deposit:
+dst: 0xDef1..5EfF,
+wad: 12,000,000,000,000,000
+Transfer:
+src: 0xDef1..5EfF,
+dst: 0xd3d2..3a17,
+wad: 12,000,000,000,000,000
+end note
+note over d3d23a17 #aqua
+Sync:
+reserve0: 4,934,358,,795,379,028,341,326,081,
+reserve1: 57,434,,102,761,458,552,907,834
+Swap:
+sender: 0xDef1..5EfF,
+amount0In: 0,
+amount1In: 12,000,000,000,000,000,
+amount0Out: 1,,027,868,080,529,103,079,
+amount1Out: 0,
+to: 0x0000..ebBF
+end note
+note over 1f98f984 #aqua
+Transfer:
+from: 0xd3d2..3a17,
+to: 0x0000..ebBF,
+amount: 1,,027,868,080,529,103,079
+end note
+@endumls
