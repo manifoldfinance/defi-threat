@@ -1,0 +1,19 @@
+@startuml
+title 0x97520e4becbfed796cba76fd9b92770865f2e8abbdf387e7516ab8cac5d55226
+caption  Sat, 05 Mar 2022 21:21:30 GMT
+participant "0x3b0e..4640" as 3b0e4640 
+participant "0x2b00..e015" as 2b00e015 <<Xar (XAR)>>
+
+note over 3b0e4640
+Nonce: 6
+Gas Price: 62.799914669 Gwei
+Gas Limit: 7,738,802
+Gas Used: 7,738,802
+Tx Fee: 0.486 ETH
+end note
+
+3b0e4640 -> 2b00e015: 0x20152aff\n7,533,426 gas
+activate 2b00e015
+return
+
+@endumls

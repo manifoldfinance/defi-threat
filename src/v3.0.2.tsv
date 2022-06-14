@@ -1,0 +1,29 @@
+﻿001	002	003	004	005
+Market Attacks	Economic Attack	Off-Chain	On-Chain	Solidity
+Front-Running	In Arrears liability	Price Feed	Timestamp Dependence	Integer Overflow and Underflow
+Coordinated Attack	Insufficient gas griefing	Quote Stuffing	Admin Key	DoS with (Unexpected) revert
+Liquidity Pocket	Token Inflation	Spoofing	Timelock	DoS with Block Gas Limit
+Quote Stuffing	Circulating Supply Attack	Credential Access	Lateral Movements	Arithmetic Over/Under Flows
+Wash Trading	Gas Griefing (DoS)	Reentrancy	Multi-Sig Keys	Forcibly Sending Ether to a Contract
+Ramping The Market	Network Congestion (uDoS)	Privilage Esclation	Miner Cartel	Delegatecall
+Cornering The Market	Liquidity Squeeze	Credential Access	Finality	Entropy Illusion
+Churning	Governance Cartels	Encryption Protections	Honeypot	Short Address/Parameter Attack
+Flash Loans	Interlocking Directorate	Phishing	Red Queen	Uninitialised Storage Pointers
+Aggregated Transactions	Governance Attack	Unicode Exploits	Sole block synchronization	Floating Points and Numerical Precision
+Bulge Bracket Transactions	Slippage Exploit	API	Transaction Pool	Right-To-Left-Override control character (U+202E)
+Layering	Safety Check Exploits	DNS Attacks	Performance Fee Minting	Delegatecall to Untrusted Callee
+Spoofing	Circulating Supply Dump	Transaction Pool	Front-Running	Requirement Violation
+Order Book	Flash "Straddle"	Checksum Address	Sandwhiching	Shadowing State Variables
+Market Index Calculation Attack	Structuring	Siphon Funds	Second System Effector	Transaction Order Dependence
+Flash Crash	Stalking Horse	Influencers'	Backrunning	Assert Violation
+Repo	Like Asset Price Divergance	Synthetic Mint Spread	Block Producer Cartel	Uninitialized Storage Pointer
+Excessive Leverage	Reserve Asset Liquidity Manipulation	Syscall Exploit	Unlimited Permissions on Token Approval	Unprotected Ether Withdrawal
+Breaking the "Buck"	Stable Reserve Asset Manipulation	Container Priv. Esclation	Naked Call	Floating Pragma
+"Fake" News	Price Induced Oracle Volatility	Keyctl missuse (syscall)	Block Constructor Cartel	Outdated Compiler Version
+Nested Bot	Fake Token Trading Pair	Supply Chain Dependency	MaliciousAirdrop	Function Default Visibility
+Audience of Bots	Volume Manipulation by re-circulating flashloan	Compiled output destructuring const values	Oracle HALT by MultiSig	msg.sender
+Arb. Exploit	Persistant de-peg instability	Browser in the Browser attack	Ex Ante Reorg	Wallet Balance
+Cascading Loan Failure	Unexpected Fee on Transfer	Man in the Blotter	Ex Post Reorg	Compiler Optimizer not Optimizing
+		BGP Routing	Nonstandard Proxy Implementation	Math operations differ in certain pragmas
+		IP4/IP6 misconfiguration	Tyranny of the Majority	Uninitialized Contract
+				

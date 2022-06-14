@@ -1,0 +1,57 @@
+@startuml
+title 0x093ceccd651e32c5a636d9b179d286568dff92cdf6fe07c1b2b06c5e8404fcd8
+caption  Tue, 29 Jun 2021 00:13:32 GMT
+participant "0x8169..9806" as 81699806 
+participant "0xc0da..6529" as c0da6529 <<GovernorBravoDelegator>>
+participant "0xaaaa..e378" as aaaae378 <<GovernorBravoDelegate>>
+participant "0xc00e..6888" as c00e6888 <<Compound (COMP)>><<Comp>>
+
+note over 81699806
+Nonce: 29
+Gas Price: 10.0 Gwei
+Gas Limit: 682,020
+Gas Used: 539,378
+Tx Fee: 0.005 ETH
+end note
+
+81699806 --> c0da6529: propose(\ntargets: [\n  0: 0x3d98..Cd3B,\n  1: 0x7544..938f],\nvalues: [\n  0: 0,\n  1: 0],\nsignatures: [\n  0: _setPendingImplementation(address),\n  1: _become(address)],\ncalldatas: [\n  0: 0x0..075442ac771a7243433e033f3f8eab2631e22938f,\n  1: 0x0..03d9819210a31b4961b30ef54be2aed79b9c9cd3b],\ndescription: # Close Deprecated Markets, Gas Savings
+This proposal is a patch, developed by Compound Labs, which updates the Comptroller implementation contract.
+
+### Changelog
+
+The `claimComp` function has been optimized to significantly reduce the gas cost of claiming COMP across multiple markets at once, by combining all rewards into a single transfer.
+
+Markets with a 0% Collateral Factor, 100% Reserve Factor, and Borrowing Paused are inferred to be *deprecated* by the Comptroller, and allowed to be completely liquidated. This allows the closure of all outstanding borrows and the removal of reserves in deprecated markets including SAI, REP, and future migrations.
+
+### Development
+
+This patch was developed publicly, coupled with completed scenario analysis. In addition to the Compound Labs bug bounty program, a secondary bug bounty was offered through [Immunefi](https://immunefi.com/bounty/compound/).
+
+[Discussion](https://www.comp.xyz/t/safety-and-gas-patches/1723)
+)\n497,426 gas
+activate c0da6529
+c0da6529 ->> aaaae378: propose(\ntargets: [\n  0: 0x3d98..Cd3B,\n  1: 0x7544..938f],\nvalues: [\n  0: 0,\n  1: 0],\nsignatures: [\n  0: _setPendingImplementation(address),\n  1: _become(address)],\ncalldatas: [\n  0: 0x0..075442ac771a7243433e033f3f8eab2631e22938f,\n  1: 0x0..03d9819210a31b4961b30ef54be2aed79b9c9cd3b],\ndescription: # Close Deprecated Markets, Gas Savings
+This proposal is a patch, developed by Compound Labs, which updates the Comptroller implementation contract.
+
+### Changelog
+
+The `claimComp` function has been optimized to significantly reduce the gas cost of claiming COMP across multiple markets at once, by combining all rewards into a single transfer.
+
+Markets with a 0% Collateral Factor, 100% Reserve Factor, and Borrowing Paused are inferred to be *deprecated* by the Comptroller, and allowed to be completely liquidated. This allows the closure of all outstanding borrows and the removal of reserves in deprecated markets including SAI, REP, and future migrations.
+
+### Development
+
+This patch was developed publicly, coupled with completed scenario analysis. In addition to the Compound Labs bug bounty program, a secondary bug bounty was offered through [Immunefi](https://immunefi.com/bounty/compound/).
+
+[Discussion](https://www.comp.xyz/t/safety-and-gas-patches/1723)
+)\n491,783 gas
+activate aaaae378 #809ECB
+c0da6529 -[#3471CD]> c00e6888: getPriorVotes(\naccount: 0x8169..9806,\nblockNumber: 12,725,698)\n5,652 gas
+activate c00e6888
+return\n101,000,,024,654,469,732,833,014
+return
+note right of aaaae378: \n486,131 gas
+return\n50
+note right of c0da6529: \n5,643 gas
+
+@endumls

@@ -1,17 +1,60 @@
-# DeFi Threat Matrix
+# Decentralized Finance Threat Matrix
 
-- v3 of the DeFi Matrix will be released at ETH Denver 2022
+- v3.0.2 is the latest release (v2022.06.13-302)
 
-- v1 and v2 can be found below
+
+### Changes
+
+New attacks such as Ex Post/Ex Ante Reorg (On-Chain), Compiler not Optimizing errors (Solidity), BGP Routing Hijacking (Off-chain) and more.
 
 ## Abstract
 
 This work is inspired by [attack.mitre.org](https://attack.mitre.org). Please
-use attack for "normal" InfoSec/Dev/Sys security check-listing, this is ment to
-be specialized towards the unique issues brought about in
-blockchain/cryptocurrency applications (i.e. protocols).
+use attack for "normal" InfoSec/Dev/Sys security check-listing, this is meant to
+be specialized towards the unique issues brought about in blockchain/cryptocurrency applications (i.e. protocols).
+
+### Repository Structure
+
+- libtx: transaction library with example transactions from hacks in a UML format
+
+- src: Source of the latest DeFi Threat Mapping and Matrix. Provided in `.mediawiki` and `.tsv` formats. 
 
 ## Overview of Threat Matrix
+
+*| 001                             | 002                                             | 003                                        | 004                                     | 005                                               |*
+|---------------------------------|-------------------------------------------------|--------------------------------------------|-----------------------------------------|---------------------------------------------------|
+**| Market Attacks                  | Economic Attack                                 | Off-Chain                                  | On-Chain                                | Solidity                                          |**
+| Front-Running                   | In Arrears liability                            | Price Feed                                 | Timestamp Dependence                    | Integer Overflow and Underflow                    |
+| Coordinated Attack              | Insufficient gas griefing                       | Quote Stuffing                             | Admin Key                               | DoS with (Unexpected) revert                      |
+| Liquidity Pocket                | Token Inflation                                 | Spoofing                                   | Timelock                                | DoS with Block Gas Limit                          |
+| Quote Stuffing                  | Circulating Supply Attack                       | Credential Access                          | Lateral Movements                       | Arithmetic Over/Under Flows                       |
+| Wash Trading                    | Gas Griefing (DoS)                              | Reentrancy                                 | Multi-Sig Keys                          | Forcibly Sending Ether to a Contract              |
+| Ramping The Market              | Network Congestion (uDoS)                       | Privilage Esclation                        | Miner Cartel                            | Delegatecall                                      |
+| Cornering The Market            | Liquidity Squeeze                               | Credential Access                          | Finality                                | Entropy Illusion                                  |
+| Churning                        | Governance Cartels                              | Encryption Protections                     | Honeypot                                | Short Address/Parameter Attack                    |
+| Flash Loans                     | Interlocking Directorate                        | Phishing                                   | Red Queen                               | Uninitialised Storage Pointers                    |
+| Aggregated Transactions         | Governance Attack                               | Unicode Exploits                           | Sole block synchronization              | Floating Points and Numerical Precision           |
+| Bulge Bracket Transactions      | Slippage Exploit                                | API                                        | Transaction Pool                        | Right-To-Left-Override control character (U+202E) |
+| Layering                        | Safety Check Exploits                           | DNS Attacks                                | Performance Fee Minting                 | Delegatecall to Untrusted Callee                  |
+| Spoofing                        | Circulating Supply Dump                         | Transaction Pool                           | Front-Running                           | Requirement Violation                             |
+| Order Book                      | Flash "Straddle"                                | Checksum Address                           | Sandwhiching                            | Shadowing State Variables                         |
+| Market Index Calculation Attack | Structuring                                     | Siphon Funds                               | Second System Effector                  | Transaction Order Dependence                      |
+| Flash Crash                     | Stalking Horse                                  | Influencers'                               | Backrunning                             | Assert Violation                                  |
+| Repo                            | Like Asset Price Divergance                     | Synthetic Mint Spread                      | Block Producer Cartel                   | Uninitialized Storage Pointer                     |
+| Excessive Leverage              | Reserve Asset Liquidity Manipulation            | Syscall Exploit                            | Unlimited Permissions on Token Approval | Unprotected Ether Withdrawal                      |
+| Breaking the "Buck"             | Stable Reserve Asset Manipulation               | Container Priv. Esclation                  | Naked Call                              | Floating Pragma                                   |
+| "Fake" News                     | Price Induced Oracle Volatility                 | Keyctl missuse (syscall)                   | Block Constructor Cartel                | Outdated Compiler Version                         |
+| Nested Bot                      | Fake Token Trading Pair                         | Supply Chain Dependency                    | MaliciousAirdrop                        | Function Default Visibility                       |
+| Audience of Bots                | Volume Manipulation by re-circulating flashloan | Compiled output destructuring const values | Oracle HALT by MultiSig                 | msg.sender                                        |
+| Arb. Exploit                    | Persistant de-peg instability                   | Browser in the Browser attack              | Ex Ante Reorg                           | Wallet Balance                                    |
+| Cascading Loan Failure          | Unexpected Fee on Transfer                      | Man in the Blotter                         | Ex Post Reorg                           | Compiler Optimizer not Optimizing                 |
+|                                 |                                                 | BGP Routing                                | Nonstandard Proxy Implementation        | Math operations differ in certain pragmas         |
+|                                 |                                                 | IP4/IP6 misconfiguration                   | Tyranny of the Majority                 | Uninitialized Contract                            |
+|                                 |                                                 |                                            |                                         |                                                   |
+
+### v2 Matrix 
+
+> For Reference use only!
 
 | **Protocol / Interaction Based** | **Blockchain Transaction Based** | **Non-Blockchain Sources** | **Blockchain Sources**     | **SWC Registry (Solidity Exploits)**                    |
 | -------------------------------- | -------------------------------- | -------------------------- | -------------------------- | ------------------------------------------------------- |
@@ -55,10 +98,14 @@ blockchain/cryptocurrency applications (i.e. protocols).
 
 ![](https://d.pr/i/5vsXd4.jpeg)
 
-
 ## Contributions and Acknowledgements
 
-Ali Atiia John Mardlin Raul Jack samczsun Sam Bacha James Zaki
+Ali Atiia   <br />
+John Mardlin   <br />
+Raul Jack   <br />
+samczsun   <br />
+Sam Bacha  <br />
+James Zaki  <br />
 
 ### v1 Sheet
 
@@ -72,6 +119,9 @@ Ali Atiia John Mardlin Raul Jack samczsun Sam Bacha James Zaki
 
 ## License
 
-Software Components under Mozilla Public License 2.0
+Software Components under Mozilla Public License 2.0 <br />
 
-CVE/SWC are licensed under their respective authors licenses.
+CVE/SWC are licensed under their respective author's licenses. <br />
+
+Everything else is under CC-2.5-NC-ND. If you would like an exemption to this license pleasae
+contact: <sam@manifoldfinance.com>

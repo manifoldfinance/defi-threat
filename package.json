@@ -1,8 +1,7 @@
 {
   "name": "defi-threat-matrix",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "decentralized econometric threat and security assesment",
-  "main": "index.js",
   "repository": "https://github.com/manifoldfinance/defi-threat",
   "author": "sam bacha <sam@freighttrust.com>",
   "license": "MPL-2.0",
@@ -12,8 +11,8 @@
     "prettier": "^2.5.1"
   },
   "files": [
-    "src/DEFI_THREAT_MATRIX.mediawiki",
-    "README.md",
-    "src/v3.0.0-alpha.csv"
+    "libtx/*",
+    "src/*",
+    "*.md"
   ]
 }
