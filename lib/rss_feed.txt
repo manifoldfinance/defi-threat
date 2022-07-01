@@ -1,0 +1,5 @@
+https://github.com/ethereum/go-ethereum/releases.atom
+https://github.com/ledgerwatch/erigon/releases.atom
+
+
+https://github.com/advisories?query=sort%3Aupdated-desc+severity%3Acritical
