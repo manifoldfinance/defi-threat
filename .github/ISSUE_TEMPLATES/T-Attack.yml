@@ -1,0 +1,36 @@
+name: Document Attack Pattern
+description: Suggest a Attack Pattern
+labels: ["T-Attack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please ensure that the attack is not listed and  has not already been requested or discussed in the issue tracker.
+
+  - type: dropdown
+    attributes:
+      label: Category
+      description: What category is the feature for?
+      multiple: true
+      options:
+        - Market Attacks	
+        - Economic Attacks
+        - MEV Vectors
+        - Governance Vectors
+        - On-Chain
+        - Inter-Chain
+        - Solidity/SWC
+        - Off-Chain 
+#           - Process Creation,  Command Execution, Access Esclation, Service  Modification, Trust Modification, Code Injection
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the attack pattern
+      description: Please also describe any known usages in the wild of said pattern/vector
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context to the feature (like screenshots, resources)
