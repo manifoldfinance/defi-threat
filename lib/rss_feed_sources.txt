@@ -1,5 +1,7 @@
 https://github.com/ethereum/go-ethereum/releases.atom
 https://github.com/ledgerwatch/erigon/releases.atom
 
+https://github.com/ethereum/solidity/blob/develop/docs/bugs.json
+https://github.com/ethereum/solidity/releases.atom
 
 https://github.com/advisories?query=sort%3Aupdated-desc+severity%3Acritical
