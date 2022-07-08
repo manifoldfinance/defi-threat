@@ -4,4 +4,9 @@ https://github.com/ledgerwatch/erigon/releases.atom
 https://github.com/ethereum/solidity/blob/develop/docs/bugs.json
 https://github.com/ethereum/solidity/releases.atom
 
+
+https://status.infura.io/history.atom
+
+
 https://github.com/advisories?query=sort%3Aupdated-desc+severity%3Acritical
+https://dnsimple.statuspage.io/history.atom
