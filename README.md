@@ -2,10 +2,18 @@
 
 - v3.0.2 is the latest release (v2022.06.13-302)
 
+## Advisories 
+
+We are now publishing Security Advisories [https://github.com/manifoldfinance/defi-threat/security/advisories](https://github.com/manifoldfinance/defi-threat/security/advisories)
+
+[Link to the latest published ones here](https://github.com/manifoldfinance/defi-threat/security/advisories?state=published)
 
 ### Changes
 
-New attacks such as Ex Post/Ex Ante Reorg (On-Chain), Compiler not Optimizing errors (Solidity), BGP Routing Hijacking (Off-chain) and more.
+New attacks such as: <br>
+Ex Post/Ex Ante Reorg (On-Chain),  <br>
+Compiler not Optimizing errors (Solidity),  <br>
+BGP Routing Hijacking (Off-chain) and more.
 
 ## Abstract
 
