@@ -1,9 +1,9 @@
 {
   "name": "defi-threat-matrix",
-  "version": "0.7.0",
-  "description": "decentralized econometric threat and security assesment",
+  "version": "0.7.1",
+  "description": "a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations on decentralized finance",
   "repository": "https://github.com/manifoldfinance/defi-threat",
-  "author": "sam bacha <sam@freighttrust.com>",
+  "author": "sam bacha <sam@manifoldfinance.com>",
   "license": "MPL-2.0",
   "private": false,
   "scripts": {},
