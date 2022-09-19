@@ -1,7 +1,7 @@
 # Decentralized Finance Threat Matrix
 
-- [v3.0.3 is the current release  (v2022.08.23-303)](https://github.com/manifoldfinance/defi-threat/blob/secret-size-attack/v3.0.3.md)
-- v3.0.2 is the previous release (v2022.06.13-302)
+- **[v3.0.3 (v2022.08.23-303) (current release)](https://github.com/manifoldfinance/defi-threat/blob/master/v3.0.3.md)**
+- [v3.0.2 (v2022.06.13-302) (previous release)](https://github.com/manifoldfinance/defi-threat/blob/master/src/v3.0.2.tsv)
 
 ## Advisories 
 
