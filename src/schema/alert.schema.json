@@ -1,0 +1,19 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "type",
+      "url"
+    ]
+  }
+}
