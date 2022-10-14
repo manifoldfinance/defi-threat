@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "cwe_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "severity": {
+      "type": "string"
+    },
+    "github_reviewed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "cwe_ids",
+    "severity",
+    "github_reviewed"
+  ]
+}
