@@ -1,12 +1,22 @@
 https://github.com/ethereum/go-ethereum/releases.atom
 https://github.com/ledgerwatch/erigon/releases.atom
-
+https://github.com/ethereum/go-ethereum/security/advisories
+https://github.com/ledgerwatch/erigon/security/advisories
 https://github.com/ethereum/solidity/blob/develop/docs/bugs.json
 https://github.com/ethereum/solidity/releases.atom
+https://github.com/ethereum/solidity/security/advisories
+
+https://github.com/ethereum/beacon-APIs/releases.atom
+https://github.com/ethereum/consensus-specs/releases.atom
+https://github.com/ethereum/beacon-APIs/security/advisories
+https://github.com/ethereum/consensus-specs/security/advisories
+https://github.com/ethereum/builder-specs/releases.atom
+https://github.com/ethereum/builder-specs/security/advisories
 
 
+https://status.ntppool.org/history.atom
+https://status.securerpc.com/history.atom
 https://status.infura.io/history.atom
-
 
 https://github.com/advisories?query=sort%3Aupdated-desc+severity%3Acritical
 https://dnsimple.statuspage.io/history.atom
