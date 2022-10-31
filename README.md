@@ -1,11 +1,25 @@
 # Decentralized Finance Threat Matrix
 
-- v3.0.2 is the latest release (v2022.06.13-302)
+- **[v3.0.3 (v2022.08.23-303) (current release)](https://github.com/manifoldfinance/defi-threat/blob/master/v3.0.3.md)**
+- [v3.0.2 (v2022.06.13-302) (previous release)](https://github.com/manifoldfinance/defi-threat/blob/master/src/v3.0.2.tsv)
 
+## Advisories 
+
+We are now publishing Security Advisories [https://github.com/manifoldfinance/defi-threat/security/advisories](https://github.com/manifoldfinance/defi-threat/security/advisories)
+
+[Link to the latest published ones here](https://github.com/manifoldfinance/defi-threat/security/advisories?state=published)
 
 ### Changes
 
-New attacks such as Ex Post/Ex Ante Reorg (On-Chain), Compiler not Optimizing errors (Solidity), BGP Routing Hijacking (Off-chain) and more.
+v3.0.3
+New attack: Secret Size Attack
+New Category: Interchain, id: 006
+
+v3.0.2
+New attacks such as: <br>
+Ex Post/Ex Ante Reorg (On-Chain),  <br>
+Compiler not Optimizing errors (Solidity),  <br>
+BGP Routing Hijacking (Off-chain) and more.
 
 ## Abstract
 
@@ -21,7 +35,7 @@ be specialized towards the unique issues brought about in blockchain/cryptocurre
 
 ## Overview of Threat Matrix
 
-> version v3.0.2/2022.06
+> version v3.0.3/2022.08
 
 | _001_ 	| _002_ 	| _003_ 	| _004_ 	| _005_ 	|
 |---	|---	|---	|---	|---	|
@@ -52,7 +66,7 @@ be specialized towards the unique issues brought about in blockchain/cryptocurre
 | Cascading Loan Failure 	| Unexpected Fee on Transfer  	| Man in the Blotter 	| Ex Post Reorg 	| Compiler Optimizer not Optimizing 	|
 |  	|  	| BGP Routing 	| Nonstandard Proxy Implementation 	| Math operations differ in certain pragmas 	|
 |  	|  	| IP4/IP6 misconfiguration 	| Tyranny of the Majority 	| Uninitialized Contract 	|
-|  	|  	|  	|  	|  	|
+|  	|  	|  	| Secret Size Attack  	|  	|
 
 
 ### v2 Matrix 
