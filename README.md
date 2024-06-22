@@ -31,9 +31,40 @@ be specialized towards the unique issues brought about in blockchain/cryptocurre
 
 - libtx: transaction library with example transactions from hacks in a UML format
 
-- src: Source of the latest DeFi Threat Mapping and Matrix. Provided in `.mediawiki` and `.tsv` formats. 
+- src: Source of the latest DeFi Threat Mapping and Matrix. Provided in `.mediawiki` and `.tsv` formats.
 
-## Overview of Threat Matrix
+## v4 Draft of Threat Matrix
+
+| **Market Attacks**              	| **Economic Attacks**                            	| **Off-Chain Attacks**                      	| **On-Chain Attacks**                    	| **Solidity-Specific Attacks**                     	|
+|---------------------------------	|-------------------------------------------------	|--------------------------------------------	|-----------------------------------------	|---------------------------------------------------	|
+| Front-Running                   	| In Arrears Liability                            	| Price Feed                                 	| Timestamp Dependence                    	| Integer Overflow and Underflow                    	|
+| Coordinated Attack              	| Insufficient Gas Griefing                       	| Quote Stuffing                             	| Admin Key Exploits                      	| DoS with (Unexpected) Revert                      	|
+| Liquidity Pocket                	| Token Inflation                                 	| Spoofing                                   	| Timelock Exploits                       	| DoS with Block Gas Limit                          	|
+| Quote Stuffing                  	| Circulating Supply Attack                       	| Credential Access                          	| Lateral Movements                       	| Arithmetic Over/Under Flows                       	|
+| Wash Trading                    	| Gas Griefing (DoS)                              	| Reentrancy                                 	| Multi-Sig Key Exploits                  	| Forcibly Sending Ether to a Contract              	|
+| Ramping The Market              	| Network Congestion (uDoS)                       	| Privilege Escalation                       	| Miner Cartel Attacks                    	| Delegatecall                                      	|
+| Cornering The Market            	| Liquidity Squeeze                               	| Credential Access                          	| Finality Exploits                       	| Entropy Illusion                                  	|
+| Churning                        	| Governance Cartels                              	| Encryption Protections                     	| Honeypot Attacks                        	| Short Address/Parameter Attack                    	|
+| Flash Loans                     	| Interlocking Directorate                        	| Phishing                                   	| Red Queen Attacks                       	| Uninitialized Storage Pointers                    	|
+| Aggregated Transactions         	| Governance Attack                               	| Unicode Exploits                           	| Sole Block Synchronization              	| Floating Points and Numerical Precision           	|
+| Bulge Bracket Transactions      	| Slippage Exploit                                	| API                                        	| Transaction Pool                        	| Right-To-Left-Override Control Character (U+202E) 	|
+| Layering                        	| Safety Check Exploits                           	| DNS Attacks                                	| Performance Fee Minting                 	| Delegatecall to Untrusted Callee                  	|
+| Spoofing                        	| Circulating Supply Dump                         	| Transaction Pool                           	| Front-Running                           	| Requirement Violation                             	|
+| Order Book                      	| Flash "Straddle"                                	| Checksum Address                           	| Sandwich Attacks                        	| Shadowing State Variables                         	|
+| Market Index Calculation Attack 	| Structuring                                     	| Siphon Funds                               	| Second System Effector                  	| Transaction Order Dependence                      	|
+| Flash Crash                     	| Stalking Horse                                  	| Influencer Attacks                         	| Backrunning                             	| Assert Violation                                  	|
+| Repo                            	| Like Asset Price Divergence                     	| Synthetic Mint Spread                      	| Block Producer Cartel                   	| Uninitialized Storage Pointer                     	|
+| Excessive Leverage              	| Reserve Asset Liquidity Manipulation            	| Syscall Exploit                            	| Unlimited Permissions on Token Approval 	| Unprotected Ether Withdrawal                      	|
+| Breaking the "Buck"             	| Stable Reserve Asset Manipulation               	| Container Privilege Escalation             	| Naked Call                              	| Floating Pragma                                   	|
+| Fake News                       	| Price Induced Oracle Volatility                 	| Keyctl Misuse (syscall)                    	| Block Constructor Cartel                	| Outdated Compiler Version                         	|
+| Nested Bot                      	| Fake Token Trading Pair                         	| Supply Chain Dependency                    	| Malicious Airdrop                       	| Function Default Visibility                       	|
+| Audience of Bots                	| Volume Manipulation by Re-circulating Flashloan 	| Compiled Output Destructuring Const Values 	| Oracle HALT by MultiSig                 	| msg.sender                                        	|
+| Arbitrage Exploit               	| Persistent De-Peg Instability                   	| Browser in the Browser Attack              	| Ex Ante Reorg                           	| Wallet Balance                                    	|
+| Cascading Loan Failure          	| Unexpected Fee on Transfer                      	| Man in the Blotter                         	| Ex Post Reorg                           	| Compiler Optimizer Not Optimizing                 	|
+|                                 	|                                                 	| BGP Routing                                	| Nonstandard Proxy Implementation        	| Math Operations Differ in Certain Pragmas         	|
+|                                 	|                                                 	| IP4/IP6 Misconfiguration                   	| Tyranny of the Majority                 	| Uninitialized Contract                            	|
+
+## v3 Threat Matrix
 
 > version v3.0.3/2022.08
 
